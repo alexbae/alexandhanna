@@ -14,7 +14,7 @@ mongoose
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
-app.get('/', (req, res) => res.send('Alex and Hanna!!'));
+app.get('/', (req, res) => res.send(`Welcome to Alex and Hanna's website, website is under constuction now!`));
 
 // Use Guests
 app.use('/api/guests', guests);
