@@ -14,7 +14,7 @@ class App extends Component {
                         </a>
                     </b>
                 </p>
-                <p>6001 palos Verdes Drie South, Rancho Palos Verdes, CA 90275</p>
+                <p>6001 palos Verdes Drive South, Rancho Palos Verdes, CA 90275</p>
             </div>
         );
     }
