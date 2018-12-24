@@ -41,59 +41,61 @@ class Rsvp extends Component {
     render() {
         return (
             <section>
-                <h2>RSVP</h2>
-                <form>
-                    <div>
-                        <label>Are you attending?</label>
-                        <label><input type="radio" name="attend" value="1" onChange={this.onChange} />Yes</label>
-                        <label><input type="radio" name="attend" value="0" onChange={this.onChange} />No</label>
-                    </div>
-                    <div>
-                        <label>Which side?</label>
-                        <label><input type="radio" name="side" value="groom" onChange={this.onChange} />Groom</label>
-                        <label><input type="radio" name="side" value="bride" onChange={this.onChange} />Bride</label>
-                    </div>
-                    <div>
-                        <label>Name</label>
-                        <input type="text" name="name" onChange={this.onChange} />
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input type="text" name="email" onChange={this.onChange} />
-                    </div>
-                    <div>
-                        <label>Total adults</label>
-                        <select name="adults" onChange={this.onChange}>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label>Total kids</label>
-                        <select name="kids" onChange={this.onChange}>
-                            <option>0</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                        </select>
-                    </div>
-                    <input type="submit" value="Submit" onClick={this.onSubmit} />
-                </form>
+                <div className="center">
+                    <h2 className="header">RSVP</h2>
+                    <form>
+                        <div>
+                            <label>Are you attending?</label>
+                            <label><input type="radio" name="attend" value="1" onChange={this.onChange} />Yes</label>
+                            <label><input type="radio" name="attend" value="0" onChange={this.onChange} />No</label>
+                        </div>
+                        <div>
+                            <label>Which side?</label>
+                            <label><input type="radio" name="side" value="groom" onChange={this.onChange} />Groom</label>
+                            <label><input type="radio" name="side" value="bride" onChange={this.onChange} />Bride</label>
+                        </div>
+                        <div>
+                            <label>Name</label>
+                            <input type="text" name="name" onChange={this.onChange} />
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="text" name="email" onChange={this.onChange} />
+                        </div>
+                        <div>
+                            <label>Total adults</label>
+                            <select name="adults" onChange={this.onChange}>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Total kids</label>
+                            <select name="kids" onChange={this.onChange}>
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Submit" onClick={this.onSubmit} />
+                    </form>
+                </div>
             </section>
         )
     }
