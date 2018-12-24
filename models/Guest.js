@@ -3,6 +3,14 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const GuestSchema = new Schema({
+    attend: {
+        type: Boolean,
+        required: true
+    },
+    side: {
+        type: String,
+        required: true
+    },
     name: {
         type: String,
         required: true
@@ -17,7 +25,7 @@ const GuestSchema = new Schema({
     },
     kids: {
         type: Number,
-        required: false
+        required: true
     }
 });
 

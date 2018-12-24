@@ -1,23 +1,26 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import store from './store'
+
+import Wedding from './components/wedding'
+import Guests from './components/Guests'
+
+import './App.css'
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <h1>Alex Bae & Hanna Kim's Wedding</h1>
-                <p>Saturday, May 4 at 3:30PM to 9:00PM</p>
-                <p>
-                    <b>
-                        <a href="https://goo.gl/maps/yYZwW95uWz42" target="_blank">
-                            Catalina View Gardens
-                        </a>
-                    </b>
-                </p>
-                <p>6001 palos Verdes Drive South, Rancho Palos Verdes, CA 90275</p>
-            </div>
-        );
+            <Provider store={ store }>
+                <Router>
+                    <div className="App">
+                        <Route exact path="/" component={Wedding} />
+                        <Route exact path='/guests' component={Guests} />
+                    </div>
+                </Router>
+            </Provider>
+        )
     }
 }
 
-export default App;
+export default App
