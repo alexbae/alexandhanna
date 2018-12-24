@@ -32,18 +32,48 @@ class Rsvp extends Component {
         const { guests } = this.state
 
         return (
-            <section>
-                <h2>Guests</h2>
-                { guests && guests.length && (
-                    guests.map((guest, idx) =>
-                        <div key={idx}>
-                            <li>{guest.name}</li>
-                            <li>{guest.attend}</li>
-                            <li>{guest.adults}</li>
-                            <li>{guest.kids}</li>
-                        </div>
-                    )
-                )}
+            <section className="guest-list">
+                <div className="center">
+                    <h2>Guests List</h2>
+                    <div className="guest-side">
+                        Groom's side
+                        <table>
+                            <tr>
+                                <td>Name</td>
+                                <td>Status</td>
+                                <td>Adults</td>
+                                <td>Kids</td>
+                            </tr>
+                            { guests && guests.length && (
+                                guests.map((guest, idx) =>
+                                    guest.side === 'groom' && (
+                                        <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
+                                            <td>{guest.name}</td>
+                                            <td>{guest.attend ? "attending" : "not attending"}</td>
+                                            <td>{guest.adults}</td>
+                                            <td>{guest.kids}</td>
+                                        </tr>
+                                    )
+                                )
+                            )}
+                        </table>
+                    </div>
+                    <div className="guest-side">
+                        Bride's side
+                        { guests && guests.length && (
+                            guests.map((guest, idx) =>
+                                guest.side === 'bride' && (
+                                    <div key={idx} className={guest.attend ? "attend" : "not-attend"}>
+                                        <li>{guest.name}</li>
+                                        <li>{guest.attend ? "attending" : "not attending"}</li>
+                                        <li>Adults: {guest.adults}</li>
+                                        {guest.kids > 0 && <li>Kids: {guest.kids}</li>}
+                                    </div>
+                                )
+                            )
+                        )}
+                    </div>
+                </div>
             </section>
         )
     }

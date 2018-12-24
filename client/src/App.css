@@ -86,3 +86,24 @@ form div {
 form label {
     display: block;
 }
+
+.guest-list {
+    margin-top: 2rem;
+}
+
+.guest-side table td {
+    padding: 1rem;
+}
+
+.guest-list li {
+    list-style: none;
+    margin-right: 1rem;
+}
+
+.guest-list .not-attend {
+    color: grey;
+}
+
+.guest-side {
+    margin-top: 2rem;
+}
