@@ -1,7 +1,13 @@
 import { SUBMIT_RSVP, GET_RSVP } from '../actions/types'
 
 const initialState = {
-    guest: {}
+    guest: {
+        name: null,
+        email: null,
+        attend: false,
+        adult: 0,
+        kids: 0
+    }
 }
 
 export default function(state = initialState, action) {

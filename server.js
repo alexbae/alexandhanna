@@ -29,10 +29,10 @@ mongoose
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 
-app.get('/', (req, res) => res.send(`Hello`));
-
 // Use Guests
 app.use('/api/guests', guests);
+
+app.disable('etag');
 
 const port = process.env.PORT || 5000;
 

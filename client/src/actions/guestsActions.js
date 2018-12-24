@@ -31,7 +31,7 @@ export const getRsvp = () => dispatch => {
         .catch(err =>
             dispatch({
                 type: GET_ERRORS,
-                payload: null
+                payload: {}
             })    
         )
 }

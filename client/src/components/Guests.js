@@ -3,23 +3,44 @@ import { connect } from 'react-redux'
 import { getRsvp } from '../actions/guestsActions'
 
 class Rsvp extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { 
+            guests: null
+        }
+    }
+
     componentDidMount() {
         this.props.getRsvp()
+
+        console.log('sfsdfssff', this.props)
+    }
+
+    componentWillMount() {
+        console.log('componentWillMount')
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.guests !== this.props.guests) {
+            this.setState({
+                guests: this.props.guests.guest
+            })
+        }
     }
 
     render() {
-        const { guest } = this.props.guests
+        const { guests } = this.state
 
         return (
             <section>
                 <h2>Guests</h2>
-                { guest.length && (
-                    guest.map((list, idx) =>
+                { guests && guests.length && (
+                    guests.map((guest, idx) =>
                         <div key={idx}>
-                            <li>{list.name}</li>
-                            <li>{list.attend}</li>
-                            <li>{list.adults}</li>
-                            <li>{list.kids}</li>
+                            <li>{guest.name}</li>
+                            <li>{guest.attend}</li>
+                            <li>{guest.adults}</li>
+                            <li>{guest.kids}</li>
                         </div>
                     )
                 )}
@@ -28,8 +49,11 @@ class Rsvp extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    guests: state.guests
-})
+const mapStateToProps = state => {
+    console.log('state', state)
+    return ({
+        guests: state.guests
+    })
+} 
 
 export default connect(mapStateToProps, { getRsvp })(Rsvp)
