@@ -5,7 +5,7 @@ import { SUBMIT_RSVP, GET_RSVP, GET_ERRORS } from './types'
 export const submitRsvp = guestData => dispatch => {
     axios
         .post('/api/guests', guestData)
-        .then(res => 
+        .then(res =>
             dispatch({
                 type: SUBMIT_RSVP,
                 payload: guestData

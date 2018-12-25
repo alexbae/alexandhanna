@@ -6,6 +6,13 @@ a {
     text-decoration: none;
 }
 
+input[type="text"] {
+    padding: 0.5rem;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #dadada;
+}
+
 .main-header {
     margin: 2rem 0;
     text-align: center;
@@ -17,6 +24,12 @@ a {
     font-weight: bold;
     font-size: 1.25rem;
     color: grey;
+}
+
+.title {
+    color: darkgray;
+    font-weight: bold;
+    margin: 1rem 0 .5rem;
 }
 
 .logo {
@@ -55,6 +68,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .center {
@@ -72,15 +86,15 @@ a {
 }
 
 form {
-    border: 1px solid #dadada;
+    border: 1px solid #f7f7f7;
     background: #f9f9f9;
     border-radius: 5px;
-    padding: 1rem 2rem;
-    margin-top: 2rem;
+    padding: 0 2rem 2rem;
+    box-shadow: 0 10px 10px 5px rgba(200,200,200,0.3);
 }
 
 form div {
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 form label {
@@ -106,4 +120,24 @@ form label {
 
 .guest-side {
     margin-top: 2rem;
+}
+
+.tag {
+    margin-bottom: .5rem;
+}
+
+.error {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="submit"] {
+    width: calc(202px + 1rem);
+    padding: .75rem .5rem;
+    background-color: #85af4b;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
 }

@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react';
 
 import logo from '../../assets/images/logo.svg'
 import marker from '../../assets/images/marker.svg'
+import main from '../../assets/images/catalina.jpg'
 
 const now = new Date()
 const end = new Date('05/04/2019 00:00 AM')
@@ -41,7 +42,9 @@ class Main extends Component {
                         </p>
                     </div>
                 </header>                
-                <div className="photo-placeholder">Coming soon...</div>
+                <div className="photo-placeholder">
+                    <img src={main} alt="main" />
+                </div>
                 <div className="center">
                     <h2 className="header">
                         Date    
@@ -53,9 +56,8 @@ class Main extends Component {
                         Location
                     </h2>
                     <p>
-                        <a href="https://goo.gl/maps/yYZwW95uWz42" target="_blank" rel="noopener noreferrer">
-                            Catalina View Gardens
-                        </a>
+                        Catalina View Gardens 
+                        (<a href="https://goo.gl/maps/yYZwW95uWz42" target="_blank" rel="noopener noreferrer">Get directions</a>)
                     </p>
                     <p>
                         6001 palos Verdes Drive South, Rancho Palos Verdes, CA 90275
