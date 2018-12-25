@@ -5,6 +5,7 @@ class Others extends Component {
         return (
             <section>
                 <div className="center">
+                    <div className="hr" />
                     <h2 className="header">Others</h2>
                     <h3 className="title">Foods</h3>
                     <p>

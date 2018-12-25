@@ -5,6 +5,7 @@ class Photos extends Component {
         return (
             <section>
                 <div className="center">
+                    <div className="hr" />
                     <h2 className="header">Photos</h2>
                     images
                 </div>

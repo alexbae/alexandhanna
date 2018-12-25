@@ -46,18 +46,21 @@ class Main extends Component {
                     <img src={main} alt="main" />
                 </div>
                 <div className="center">
+                    <div className="hr-no" />
                     <h2 className="header">Story</h2>
                     <p>
                         서로 다르고도 너무 닮은 두 사람이 아름다운 인연으로 연인 사이가 되어 샌프란시스코와 뉴욕을 오가며
                         1년 넘게 한 연애의 종지부를 찍고 이제 같이 새로운 시작을 하려 합니다.
                         우리 결혼식에 오셔서 같이 축하해주시기 바랍니다.
                     </p>
+                    <div className="hr" />
                     <h2 className="header">
                         Date    
                     </h2>
                     <div>
                         <strong>May 4, 2019</strong> (<span>{dday}</span> Day{dday > 1 ? 's' : ''} left)
                     </div>
+                    <div className="hr" />
                     <h2 className="header">
                         Location
                     </h2>

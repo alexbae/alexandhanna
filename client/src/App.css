@@ -19,7 +19,7 @@ input[type="text"] {
 }
 
 .header {
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     margin-bottom: .5rem;
     font-weight: bold;
     font-size: 1.25rem;
@@ -41,6 +41,18 @@ input[type="text"] {
     height: 1rem;
     position: relative;
     top: -1rem;
+}
+
+.hr {
+    border-top: 1px solid #dadada;
+    width: 350px;
+    margin: 4rem auto;
+}
+
+.hr-no {
+    border-top: 1px solid transparent;
+    width: 350px;
+    margin: 2rem auto;
 }
 
 .info {

@@ -61,6 +61,7 @@ class Rsvp extends Component {
         return (
             <section>
                 <div className="center">
+                    <div className="hr" />
                     <h2 className="header">RSVP</h2>
                     { sumbitted 
                         ? <p>
