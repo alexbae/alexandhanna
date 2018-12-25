@@ -56,14 +56,13 @@ class Main extends Component {
                         Date    
                     </h2>
                     <div>
-                        May 4, 2019 (<span>{dday}</span> Day{dday > 1 ? 's' : ''} left)
+                        <strong>May 4, 2019</strong> (<span>{dday}</span> Day{dday > 1 ? 's' : ''} left)
                     </div>
                     <h2 className="header">
                         Location
                     </h2>
                     <p>
-                        Catalina View Gardens 
-                        (<a href="https://goo.gl/maps/yYZwW95uWz42" target="_blank" rel="noopener noreferrer">Get directions</a>)
+                        <strong>Catalina View Gardens</strong> (<a href="https://goo.gl/maps/yYZwW95uWz42" target="_blank" rel="noopener noreferrer">Get directions</a>)
                     </p>
                     <p>
                         6001 palos Verdes Drive South, Rancho Palos Verdes, CA 90275
