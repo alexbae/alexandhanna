@@ -46,7 +46,7 @@ class Main extends Component {
                     <img src={main} alt="main" />
                 </div>
                 <div className="center">
-                    <div className="hr-no" />
+                    <div className="hr" />
                     <h2 className="header">Story</h2>
                     <p>
                         서로 다르고도 너무 닮은 두 사람이 아름다운 인연으로 연인 사이가 되어 샌프란시스코와 뉴욕을 오가며

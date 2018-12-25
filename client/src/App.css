@@ -45,15 +45,14 @@ input[type="text"] {
 
 .hr {
     border-top: 1px solid #dadada;
-    width: 350px;
-    margin: 4rem auto;
+    width: 250px;
+    margin: 3rem auto;
 }
 
-.hr-no {
+/* .hr-no {
     border-top: 1px solid transparent;
-    width: 350px;
     margin: 2rem auto;
-}
+} */
 
 .info {
     margin-top: 1rem;
