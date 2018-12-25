@@ -105,6 +105,11 @@ form label {
     margin-top: 2rem;
 }
 
+.guest-side table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
 .guest-side table td {
     padding: 1rem;
 }
@@ -120,6 +125,12 @@ form label {
 
 .guest-side {
     margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ebebeb;
+}
+
+.tr-head {
+    background-color: #ebebeb;
 }
 
 .tag {
