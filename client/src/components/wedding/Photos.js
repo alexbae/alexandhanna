@@ -7,7 +7,7 @@ class Photos extends Component {
                 <div className="center">
                     <div className="hr" />
                     <h2 className="header">Photos</h2>
-                    images
+                    Coming soon...
                 </div>
             </section>
         )

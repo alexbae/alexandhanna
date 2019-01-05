@@ -3,7 +3,12 @@ strong {
 }
 
 a {
+    color: #1a0dab;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 input[type="text"] {
@@ -163,4 +168,16 @@ input[type="submit"] {
     color: white;
     cursor: pointer;
     -webkit-appearance: none;
+}
+
+.Registry-list {
+    margin-top: 1rem;
+}
+
+.Registry-list li {
+    margin: .5rem 0;
+}
+
+.pb-1 {
+    padding-bottom: 1rem;
 }

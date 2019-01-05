@@ -3,6 +3,7 @@ import Main from './Main'
 import Rsvp from './Rsvp'
 import Others from './Others'
 import Photos from './Photos'
+import Registry from './Registry'
 
 class Wedding extends Component {
     render() {
@@ -11,6 +12,7 @@ class Wedding extends Component {
                 <Main />
                 <Rsvp />
                 <Photos />
+                <Registry />
                 <Others />
             </>
         )
