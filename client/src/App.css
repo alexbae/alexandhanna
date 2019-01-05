@@ -181,3 +181,11 @@ input[type="submit"] {
 .pb-1 {
     padding-bottom: 1rem;
 }
+
+footer {
+    margin-top: 5rem;
+    background: gray;
+    color: white;
+    padding: .5rem 1rem;
+    font-size: .75rem;
+}
