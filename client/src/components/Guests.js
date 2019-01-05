@@ -25,31 +25,33 @@ class Rsvp extends Component {
     render() {
         const { guests } = this.state
 
-        // const counter = side => {
-        //     let total = 0
-        //     let adults = 0
-        //     let kids = 0
+        const hasGuests = guests && guests.length > 0
+
+        const counter = side => {
+            let total = 0
+            let adults = 0
+            let kids = 0
             
-        //     if (guests && guests.length) {
-        //         guests.map(guest => {
-        //             if(guest.side === side && guest.attend) {
-        //                 adults += guest.adults
-        //                 kids += guest.kids
-        //             }
-        //         })
-        //     }
+            if (hasGuests) {
+                guests.map(guest => {
+                    if(guest.side === side && guest.attend) {
+                        adults += guest.adults
+                        kids += guest.kids
+                    }
 
-        //     total = adults + kids
+                    return total = adults + kids
+                })
+            }
 
-        //     return { total, kids }
-        // }
+            return { total, kids }
+        }
 
         return (
             <section className="guest-list">
                 <div className="center">
                     <h1 className="header">Guests List</h1>
                     <div className="guest-side">
-                        {/* Alex's side : total {counter('groom').total} (kids {counter('groom').kids}) */}
+                        Alex's side : total {counter('groom').total} (kids {counter('groom').kids})
                         <table>
                             <tbody>
                                 <tr className="tr-head">
@@ -74,7 +76,7 @@ class Rsvp extends Component {
                         </table>
                     </div>
                     <div className="guest-side">
-                        {/* Hanna's side : total {counter('bride').total} (kids {counter('brid').kids}) */}
+                        Hanna's side : total {counter('bride').total} (kids {counter('bride').kids})
                         <table>
                             <tbody>
                                 <tr className="tr-head">
