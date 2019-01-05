@@ -11,18 +11,6 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Server static assets if in production
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-
-    app.disable('etag');
-
-    app.get('/*', (req, res) => {
-        res.setHeader('Last-Modified', (new Date()).toUTCString())
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-    })
-}
-
 // DB Config
 const db = require('./config/keys').mongoURI;
 
@@ -34,6 +22,18 @@ mongoose
 
 // Use Guests
 app.use('/api/guests', guests);
+
+// Server static assets if in production
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+
+    // app.disable('etag');
+
+    app.get('/*', (req, res) => {
+        res.setHeader('Last-Modified', (new Date()).toUTCString())
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    })
+}
 
 const port = process.env.PORT || 5000;
 

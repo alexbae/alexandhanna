@@ -29,7 +29,7 @@ class Rsvp extends Component {
 
         const counter = side => {
             let total = 0
-            let adults = 0
+            // let adults = 0
             let kids = 0
             
             console.log({ guests })

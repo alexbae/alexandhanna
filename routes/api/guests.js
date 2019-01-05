@@ -8,11 +8,19 @@ const Guest = require('../../models/Guest');
 // @desc    Tests guests route
 // @access  Public
 router.get('/', (req, res) => {
+    const errors = {}
+
     Guest.find()
         .sort({ name: 1 })
         .then(guests => {
+            if (!guests) {
+                errors.noGuests = 'There are no guests'
+                return res.status(404).json(errors)
+            }
+
             res.json(guests)
         })
+        .catch(err => res.status(404).json({ guests: 'There are no guests'}))
 });
 
 // @route   POST api/guests
