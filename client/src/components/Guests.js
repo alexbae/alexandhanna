@@ -31,8 +31,6 @@ class Rsvp extends Component {
             let total = 0
             let adults = 0
             let kids = 0
-            
-            console.log({ guests })
 
             if (hasGuests) {
                 guests.map(guest => {
@@ -45,15 +43,28 @@ class Rsvp extends Component {
                 })
             }
 
-            return { total, kids }
+            return { total, adults, kids }
+        }
+
+        const totalCount = () => {
+            let total = 0
+            let adults = 0
+            let kids = 0
+
+            adults = counter('groom').adults + counter('bride').adults
+            kids = counter('groom').kids + counter('bride').kids
+            total = adults + kids
+
+            return { total, adults, kids }
         }
 
         return (
             <section className="guest-list">
                 <div className="center">
                     <h1 className="header">Guests List</h1>
+                    <p>Total : {totalCount().total} (Adults : {totalCount().adults}, Kids : {totalCount().kids})</p>
                     <div className="guest-side">
-                        Alex's side : total {counter('groom').total} (kids {counter('groom').kids})
+                        Alex's side : adults {counter('groom').adults} (kids {counter('groom').kids})
                         <table>
                             <tbody>
                                 <tr className="tr-head">
@@ -78,7 +89,7 @@ class Rsvp extends Component {
                         </table>
                     </div>
                     <div className="guest-side">
-                        Hanna's side : total {counter('bride').total} (kids {counter('bride').kids})
+                        Hanna's side : adults {counter('bride').adults} (kids {counter('bride').kids})
                         <table>
                             <tbody>
                                 <tr className="tr-head">
