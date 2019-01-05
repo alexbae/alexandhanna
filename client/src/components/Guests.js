@@ -33,7 +33,7 @@ class Rsvp extends Component {
             let kids = 0
             
             if (hasGuests) {
-                guests.map(guest => {
+                return guests.map(guest => {
                     if(guest.side === side && guest.attend) {
                         adults += guest.adults
                         kids += guest.kids
