@@ -12,12 +12,6 @@ class Rsvp extends Component {
 
     componentDidMount() {
         this.props.getRsvp()
-
-        console.log('sfsdfssff', this.props)
-    }
-
-    componentWillMount() {
-        console.log('componentWillMount')
     }
 
     componentDidUpdate(prevProps) {
@@ -31,31 +25,31 @@ class Rsvp extends Component {
     render() {
         const { guests } = this.state
 
-        const counter = side => {
-            let total = 0
-            let adults = 0
-            let kids = 0
+        // const counter = side => {
+        //     let total = 0
+        //     let adults = 0
+        //     let kids = 0
             
-            if (guests && guests.length) {
-                guests.map(guest => {
-                    if(guest.side === side && guest.attend) {
-                        adults += guest.adults
-                        kids += guest.kids
-                    }
-                })
-            }
+        //     if (guests && guests.length) {
+        //         guests.map(guest => {
+        //             if(guest.side === side && guest.attend) {
+        //                 adults += guest.adults
+        //                 kids += guest.kids
+        //             }
+        //         })
+        //     }
 
-            total = adults + kids
+        //     total = adults + kids
 
-            return { total, kids }
-        }
+        //     return { total, kids }
+        // }
 
         return (
             <section className="guest-list">
                 <div className="center">
                     <h1 className="header">Guests List</h1>
                     <div className="guest-side">
-                        Alex's side : total {counter('groom').total} (kids {counter('groom').kids})
+                        {/* Alex's side : total {counter('groom').total} (kids {counter('groom').kids}) */}
                         <table>
                             <tbody>
                                 <tr className="tr-head">
@@ -64,7 +58,7 @@ class Rsvp extends Component {
                                     <td>Adults</td>
                                     <td>Kids</td>
                                 </tr>
-                                { guests && guests.length && (
+                                {/* { guests && guests.length && (
                                     guests.map((guest, idx) =>
                                         guest.side === 'groom' && (
                                             <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
@@ -75,12 +69,12 @@ class Rsvp extends Component {
                                             </tr>
                                         )
                                     )
-                                )}
+                                )} */}
                             </tbody>
                         </table>
                     </div>
                     <div className="guest-side">
-                        Hanna's side : total {counter('bride').total} (kids {counter('brid').kids})
+                        {/* Hanna's side : total {counter('bride').total} (kids {counter('brid').kids}) */}
                         <table>
                             <tbody>
                                 <tr className="tr-head">
@@ -89,7 +83,7 @@ class Rsvp extends Component {
                                     <td>Adults</td>
                                     <td>Kids</td>
                                 </tr>
-                                { guests && guests.length && (
+                                {/* { guests && guests.length && (
                                     guests.map((guest, idx) =>
                                         guest.side === 'bride' && (
                                             <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
@@ -100,7 +94,7 @@ class Rsvp extends Component {
                                             </tr>
                                         )
                                     )
-                                )}
+                                )} */}
                             </tbody>
                         </table>
                     </div>
@@ -111,7 +105,6 @@ class Rsvp extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log('state', state)
     return ({
         guests: state.guests
     })
