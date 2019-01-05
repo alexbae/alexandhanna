@@ -29,20 +29,20 @@ class Rsvp extends Component {
 
         const counter = side => {
             let total = 0
-            // let adults = 0
+            let adults = 0
             let kids = 0
             
             console.log({ guests })
 
             if (hasGuests) {
-                // return guests.map(guest => {
-                //     if(guest.side === side && guest.attend) {
-                //         adults += guest.adults
-                //         kids += guest.kids
-                //     }
+                guests.map(guest => {
+                    if(guest.side === side && guest.attend) {
+                        adults += guest.adults
+                        kids += guest.kids
+                    }
 
-                //     return total = adults + kids
-                // })
+                    return total = adults + kids
+                })
             }
 
             return { total, kids }
@@ -62,7 +62,7 @@ class Rsvp extends Component {
                                     <td>Adults</td>
                                     <td>Kids</td>
                                 </tr>
-                                {/* { guests && guests.length && (
+                                { guests && guests.length && (
                                     guests.map((guest, idx) =>
                                         guest.side === 'groom' && (
                                             <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
@@ -73,7 +73,7 @@ class Rsvp extends Component {
                                             </tr>
                                         )
                                     )
-                                )} */}
+                                )}
                             </tbody>
                         </table>
                     </div>
@@ -87,7 +87,7 @@ class Rsvp extends Component {
                                     <td>Adults</td>
                                     <td>Kids</td>
                                 </tr>
-                                {/* { guests && guests.length && (
+                                { guests && guests.length && (
                                     guests.map((guest, idx) =>
                                         guest.side === 'bride' && (
                                             <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
@@ -98,7 +98,7 @@ class Rsvp extends Component {
                                             </tr>
                                         )
                                     )
-                                )} */}
+                                )}
                             </tbody>
                         </table>
                     </div>
