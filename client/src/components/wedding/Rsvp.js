@@ -63,7 +63,7 @@ class Rsvp extends Component {
                 <div className="center">
                     <div className="hr" />
                     <h2 className="header">RSVP</h2>
-                    <p className="pb-1">RSVP is required in our wedding.</p>
+                    <p className="pb-1">Invitation card required to attending our wedding.</p>
                     { sumbitted 
                         ? <p>
                             {attend === "1"
