@@ -32,15 +32,17 @@ class Rsvp extends Component {
             let adults = 0
             let kids = 0
             
-            if (hasGuests) {
-                return guests.map(guest => {
-                    if(guest.side === side && guest.attend) {
-                        adults += guest.adults
-                        kids += guest.kids
-                    }
+            console.log({ guests })
 
-                    return total = adults + kids
-                })
+            if (hasGuests) {
+                // return guests.map(guest => {
+                //     if(guest.side === side && guest.attend) {
+                //         adults += guest.adults
+                //         kids += guest.kids
+                //     }
+
+                //     return total = adults + kids
+                // })
             }
 
             return { total, kids }
