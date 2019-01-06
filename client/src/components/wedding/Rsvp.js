@@ -22,9 +22,12 @@ class Rsvp extends Component {
         this.onSubmit = this.onSubmit.bind(this)
     }
 
-    // componentDidMount() {
-    //     console.log(document.getElementById('#rsvp').getBoundingClientRect())
-    // }
+    componentDidMount() {
+        this.setState({
+            sumbitted: sessionStorage.getItem("@wedding/submitted"),
+            userExists: true
+        })
+    }
 
     isValid(data) {
         if (data.side == null || data.name.trim() === "" || data.email.trim() === "") {
@@ -66,6 +69,7 @@ class Rsvp extends Component {
         if (this.isValid(guestData)) {
             this.props.submitRsvp(guestData)
             this.setState({ hasErrors: false, sumbitted: true })
+            sessionStorage.setItem("@wedding/submitted", true);
         } else {
             this.setState({ hasErrors: true })
         }
@@ -80,7 +84,11 @@ class Rsvp extends Component {
     }
 
     render() {
-        const { sumbitted, attend, hasErrors, userExists } = this.state
+        const { sumbitted, attend, hasErrors, userExists, alreadySumbitted } = this.state
+
+        if(alreadySumbitted) {
+            console.log('yes') 
+        }
 
         return (
             <section>
@@ -92,9 +100,9 @@ class Rsvp extends Component {
                         <p className="error-box mb-1">Please correct the fields and submit again.</p>
                     }
                     { sumbitted
-                        ? <p className={userExists ? "error-box" : "message-box"}>
+                        ? <p className={"message-box"}>
                             {userExists 
-                                ? "Your email is already exists! If you want to modify your RSVP, please contact to Host!" 
+                                ? "You already Submitted this RSVP. If you want to modify your RSVP, please contact to Alex or Hanna!" 
                                 : attend === "1"
                                     ? "Thank you for you said attend our wedding, see you at our wedding!"
                                     : "Sorry to hear that, but please meet us in near future!"}
