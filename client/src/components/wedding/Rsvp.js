@@ -22,6 +22,10 @@ class Rsvp extends Component {
         this.onSubmit = this.onSubmit.bind(this)
     }
 
+    // componentDidMount() {
+    //     console.log(document.getElementById('#rsvp').getBoundingClientRect())
+    // }
+
     isValid(data) {
         if (data.side == null || data.name.trim() === "" || data.email.trim() === "") {
             return false
@@ -30,7 +34,10 @@ class Rsvp extends Component {
     }
 
     onChange(e) {
-        this.setState({ [e.target.name]: e.target.value })
+        this.setState({ 
+            [e.target.name]: e.target.value,
+            hasErrors: false 
+        })
     }
 
     checkEmail(e) {
@@ -61,11 +68,9 @@ class Rsvp extends Component {
             this.setState({ hasErrors: false, sumbitted: true })
         } else {
             this.setState({ hasErrors: true })
-
-            setTimeout(() => {
-                this.setState({ hasErrors: false })
-            }, 5000)
         }
+
+        window.scrollTo(0, document.getElementById('rsvp').offsetTop)
     }
 
     componentWillReceiveProps(nextProps) {
@@ -81,14 +86,17 @@ class Rsvp extends Component {
             <section>
                 <div className="center">
                     <div className="hr" />
-                    <h2 className="header">RSVP</h2>
+                    <h2 className="header" id="rsvp">RSVP</h2>
                     <p className="pb-1">Invitation card required to attending our wedding.</p>
+                    {hasErrors &&
+                        <p className="error-box mb-1">Please correct the fields and submit again.</p>
+                    }
                     { sumbitted
-                        ? <p className={userExists ? "error-box" : ""}>
+                        ? <p className={userExists ? "error-box" : "message-box"}>
                             {userExists 
                                 ? "Your email is already exists! If you want to modify your RSVP, please contact to Host!" 
                                 : attend === "1"
-                                    ? "Thank you for you will attend our wedding!"
+                                    ? "Thank you for you said attend our wedding, see you at our wedding!"
                                     : "Sorry to hear that, but please meet us in near future!"}
                         </p>
                         : <form>
@@ -134,9 +142,6 @@ class Rsvp extends Component {
                                 </>
                             )}
                             <input type="submit" value="SUMBIT" disabled={hasErrors ? true : false} onClick={this.onSubmit} />
-                            {hasErrors &&
-                                <p className="error">Please correct the fields and submit again.</p>
-                            }
                         </form>
                     }
                 </div>

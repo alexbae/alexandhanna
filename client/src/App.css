@@ -172,6 +172,14 @@ form label {
     padding: 1rem;
 }
 
+.message-box {
+    background: rgb(216, 250, 227);
+    border-radius: 4px;
+    color: rgb(25, 135, 78);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+
 input[type="radio"] {
     margin-right: .5rem;
 }
@@ -205,6 +213,10 @@ input[type="submit"]:disabled {
 
 .pb-1 {
     padding-bottom: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
 }
 
 .icon-link {
