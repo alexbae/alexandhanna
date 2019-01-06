@@ -12,10 +12,10 @@ class Registry extends Component {
                     </p>
                     <ul className="Registry-list">
                         <li>
-                            <a href="https://www.amazon.com/wedding/junman-bae-hanna-kim-rancho-palos-verdes-may-2019/registry/3SEBCGSRDV3XL" target="_blank" rel="noopener">Amazon</a>
+                            <a href="https://www.amazon.com/wedding/junman-bae-hanna-kim-rancho-palos-verdes-may-2019/registry/3SEBCGSRDV3XL" target="_blank" rel="noopener noreferrer">Amazon</a>
                         </li>
                         <li>
-                            <a href="https://www.crateandbarrel.com/gift-registry/junman-bae-and-ha-na-ri-kim/r5928256" target="_blank" rel="noopener">Crate&Barrel</a>    
+                            <a href="https://www.crateandbarrel.com/gift-registry/junman-bae-and-ha-na-ri-kim/r5928256" target="_blank" rel="noopener noreferrer">Crate&Barrel</a>    
                         </li>
                     </ul>
                 </div>

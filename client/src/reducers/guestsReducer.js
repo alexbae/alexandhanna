@@ -1,4 +1,4 @@
-import { SUBMIT_RSVP, GET_RSVP } from '../actions/types'
+import { SUBMIT_RSVP, GET_RSVP, GET_ERRORS } from '../actions/types'
 
 const initialState = {
     guest: {
@@ -21,6 +21,10 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 guest: action.payload
+            }
+        case GET_ERRORS:
+            return {
+                error: action.payload
             }
         default:
             return state;

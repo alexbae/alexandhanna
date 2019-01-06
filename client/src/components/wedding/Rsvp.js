@@ -13,9 +13,11 @@ class Rsvp extends Component {
             adults: 1,
             kids: 0,
             hasErrors: false,
-            sumbitted: false
+            sumbitted: false,
+            userExists: false
         }
 
+        this.checkEmail = this.checkEmail.bind(this)
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
@@ -29,6 +31,17 @@ class Rsvp extends Component {
 
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value })
+    }
+
+    checkEmail(e) {
+        const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        
+        const matchFormat = e.target.value.match(mailformat) ? true : false
+
+        this.setState({
+            hasErrors: !matchFormat
+        })
+
     }
 
     onSubmit(e) {
@@ -55,8 +68,14 @@ class Rsvp extends Component {
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.guests.error) {
+            this.setState({ userExists: true })
+        }
+    }
+
     render() {
-        const { sumbitted, attend, hasErrors } = this.state
+        const { sumbitted, attend, hasErrors, userExists } = this.state
 
         return (
             <section>
@@ -64,11 +83,13 @@ class Rsvp extends Component {
                     <div className="hr" />
                     <h2 className="header">RSVP</h2>
                     <p className="pb-1">Invitation card required to attending our wedding.</p>
-                    { sumbitted 
-                        ? <p>
-                            {attend === "1"
-                                ? "Thank you for you will attend our wedding!"
-                                : "Sorry to hear that, but please meet us in near future!"}
+                    { sumbitted
+                        ? <p className={userExists ? "error" : ""}>
+                            {userExists 
+                                ? "Your email is already exists! If you want to modify your RSVP, please contact to Hanna or Alex" 
+                                : attend === "1"
+                                    ? "Thank you for you will attend our wedding!"
+                                    : "Sorry to hear that, but please meet us in near future!"}
                         </p>
                         : <form>
                             <div>
@@ -87,7 +108,7 @@ class Rsvp extends Component {
                             </div>
                             <div>
                                 <label className="tag">What is your email?</label>
-                                <input type="text" name="email" onChange={this.onChange} placeholder="alexbae84@gmail.com" />
+                                <input type="text" name="email" onChange={this.onChange} onBlur={this.checkEmail} placeholder="alexbae84@gmail.com" />
                             </div>
                             {attend === "1" && (
                                 <>
@@ -112,7 +133,7 @@ class Rsvp extends Component {
                                     </div>
                                 </>
                             )}
-                            <input type="submit" value="SUMBIT" onClick={this.onSubmit} />
+                            <input type="submit" value="SUMBIT" disabled={hasErrors ? true : false} onClick={this.onSubmit} />
                             {hasErrors &&
                                 <p className="error">Please correct errors and try again</p>
                             }
