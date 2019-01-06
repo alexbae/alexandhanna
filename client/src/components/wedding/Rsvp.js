@@ -34,7 +34,7 @@ class Rsvp extends Component {
     }
 
     checkEmail(e) {
-        const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+        const mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(.\w{2,3})+$/
         
         const matchFormat = e.target.value.match(mailformat) ? true : false
 
