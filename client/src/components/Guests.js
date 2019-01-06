@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getRsvp } from '../actions/guestsActions'
+import Footer from './wedding/Footer'
 
 class Rsvp extends Component {
     constructor(props) {
@@ -59,62 +60,65 @@ class Rsvp extends Component {
         }
 
         return (
-            <section className="guest-list">
-                <div className="center">
-                    <h1 className="header">Guests List</h1>
-                    <p>Total : {totalCount().total} (Adults : {totalCount().adults}, Kids : {totalCount().kids})</p>
-                    <div className="guest-side">
-                        Alex's side : adults {counter('groom').adults} (kids {counter('groom').kids})
-                        <table>
-                            <tbody>
-                                <tr className="tr-head">
-                                    <td>Name</td>
-                                    <td>Status</td>
-                                    <td>Adults</td>
-                                    <td>Kids</td>
-                                </tr>
-                                { guests && guests.length && (
-                                    guests.map((guest, idx) =>
-                                        guest.side === 'groom' && (
-                                            <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
-                                                <td>{guest.name}</td>
-                                                <td>{guest.attend ? "attending" : "not attending"}</td>
-                                                <td>{guest.adults}</td>
-                                                <td>{guest.kids}</td>
-                                            </tr>
+            <>
+                <section className="guest-list">
+                    <div className="center">
+                        <h1 className="header">Guests List</h1>
+                        <p>Total : {totalCount().total} (Adults : {totalCount().adults}, Kids : {totalCount().kids})</p>
+                        <div className="guest-side">
+                            Alex's side : adults {counter('groom').adults} (kids {counter('groom').kids})
+                            <table>
+                                <tbody>
+                                    <tr className="tr-head">
+                                        <td>Name</td>
+                                        <td>Status</td>
+                                        <td>Adults</td>
+                                        <td>Kids</td>
+                                    </tr>
+                                    { guests && guests.length && (
+                                        guests.map((guest, idx) =>
+                                            guest.side === 'groom' && (
+                                                <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
+                                                    <td>{guest.name}</td>
+                                                    <td>{guest.attend ? "attending" : "not attending"}</td>
+                                                    <td>{guest.adults}</td>
+                                                    <td>{guest.kids}</td>
+                                                </tr>
+                                            )
                                         )
-                                    )
-                                )}
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="guest-side">
-                        Hanna's side : adults {counter('bride').adults} (kids {counter('bride').kids})
-                        <table>
-                            <tbody>
-                                <tr className="tr-head">
-                                    <td>Name</td>
-                                    <td>Status</td>
-                                    <td>Adults</td>
-                                    <td>Kids</td>
-                                </tr>
-                                { guests && guests.length && (
-                                    guests.map((guest, idx) =>
-                                        guest.side === 'bride' && (
-                                            <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
-                                                <td>{guest.name}</td>
-                                                <td>{guest.attend ? "attending" : "not attending"}</td>
-                                                <td>{guest.adults}</td>
-                                                <td>{guest.kids}</td>
-                                            </tr>
+                                    )}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div className="guest-side">
+                            Hanna's side : adults {counter('bride').adults} (kids {counter('bride').kids})
+                            <table>
+                                <tbody>
+                                    <tr className="tr-head">
+                                        <td>Name</td>
+                                        <td>Status</td>
+                                        <td>Adults</td>
+                                        <td>Kids</td>
+                                    </tr>
+                                    { guests && guests.length && (
+                                        guests.map((guest, idx) =>
+                                            guest.side === 'bride' && (
+                                                <tr key={idx} className={guest.attend ? "attend" : "not-attend"}>
+                                                    <td>{guest.name}</td>
+                                                    <td>{guest.attend ? "attending" : "not attending"}</td>
+                                                    <td>{guest.adults}</td>
+                                                    <td>{guest.kids}</td>
+                                                </tr>
+                                            )
                                         )
-                                    )
-                                )}
-                            </tbody>
-                        </table>
+                                    )}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <Footer />
+            </>
         )
     }
 }
