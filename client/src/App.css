@@ -11,7 +11,8 @@ a:hover {
     text-decoration: underline;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
     padding: 0.5rem 0.75rem;
     width: 200px;
     border-radius: 4px;
@@ -226,6 +227,10 @@ input[type="submit"]:disabled {
     margin-bottom: 1rem;
 }
 
+.mt-2 {
+    margin-top: 2rem;
+}
+
 .icon-link {
     margin-left: 0.2rem;
 }
@@ -236,4 +241,8 @@ footer {
     color: white;
     padding: .5rem .75rem;
     font-size: .75rem;
+}
+
+.admin-list li {
+    margin: 1rem;
 }

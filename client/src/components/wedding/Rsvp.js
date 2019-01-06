@@ -77,7 +77,7 @@ class Rsvp extends Component {
         if (this.isValid(guestData)) {
             this.props.submitRsvp(guestData)
             this.setState({ hasErrors: false, sumbitted: true })
-            sessionStorage.setItem("@wedding/submitted", true);
+            sessionStorage.setItem("@wedding/submitted", true)
         } else {
             this.setState({ hasErrors: true })
         }
