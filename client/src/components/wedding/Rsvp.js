@@ -94,7 +94,7 @@ class Rsvp extends Component {
                         : <form>
                             <div>
                                 <label className="tag">Will you attend?</label>
-                                <label><input type="radio" name="attend" value="1" onChange={this.onChange} />Will able to attend</label>
+                                <label><input type="radio" name="attend" value="1" onChange={this.onChange} />Will attend</label>
                                 <label><input type="radio" name="attend" value="0" onChange={this.onChange} />Unable to attend</label>
                             </div>
                             <div>
@@ -135,7 +135,7 @@ class Rsvp extends Component {
                             )}
                             <input type="submit" value="SUMBIT" disabled={hasErrors ? true : false} onClick={this.onSubmit} />
                             {hasErrors &&
-                                <p className="error">Please correct errors and try again</p>
+                                <p className="error">Please correct the fields and submit again.</p>
                             }
                         </form>
                     }
