@@ -84,9 +84,9 @@ class Rsvp extends Component {
                     <h2 className="header">RSVP</h2>
                     <p className="pb-1">Invitation card required to attending our wedding.</p>
                     { sumbitted
-                        ? <p className={userExists ? "error" : ""}>
+                        ? <p className={userExists ? "error-box" : ""}>
                             {userExists 
-                                ? "Your email is already exists! If you want to modify your RSVP, please contact to Hanna or Alex" 
+                                ? "Your email is already exists! If you want to modify your RSVP, please contact to Host!" 
                                 : attend === "1"
                                     ? "Thank you for you will attend our wedding!"
                                     : "Sorry to hear that, but please meet us in near future!"}
