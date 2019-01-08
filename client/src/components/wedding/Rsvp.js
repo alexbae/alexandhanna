@@ -26,7 +26,7 @@ class Rsvp extends Component {
 
     componentDidMount() {
         this.setState({
-            alreadySumbitted: sessionStorage.getItem("@wedding/submitted")
+            alreadySumbitted: localStorage.getItem("@wedding/submitted")
         })
     }
 
@@ -77,7 +77,7 @@ class Rsvp extends Component {
         if (this.isValid(guestData)) {
             this.props.submitRsvp(guestData)
             this.setState({ hasErrors: false, sumbitted: true })
-            sessionStorage.setItem("@wedding/submitted", true)
+            localStorage.setItem("@wedding/submitted", true)
         } else {
             this.setState({ hasErrors: true })
         }
