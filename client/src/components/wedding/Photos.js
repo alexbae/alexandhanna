@@ -11,14 +11,15 @@ class Photos extends Component {
                 <div className="center">
                     <div className="hr" />
                     <h2 className="header">Photos</h2>
-                    <Carousel>
+                    Coming soon...
+                    {/* <Carousel>
                         <div>
                             <img src={catalina} />
                         </div>
                         <div>
                             <img src={catalina} />
                         </div>
-                    </Carousel>
+                    </Carousel> */}
                 </div>
             </section>
         )
