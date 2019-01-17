@@ -124,6 +124,10 @@ class Admin extends Component {
                                                 linkUrl={"https://www.dropbox.com/s/s08d8mwngnup0se/VoxDjs_agreement.PDF?dl=0"}
                                                 title={"DJ: Rigel"}
                                             />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/8p7rrwqe0iggxgc/ChefDora_agreement.PDF?dl=0"}
+                                                title={"Catering: Chef Dora"}
+                                            />
                                         </ul>
                                     </div>
                                     <div>
