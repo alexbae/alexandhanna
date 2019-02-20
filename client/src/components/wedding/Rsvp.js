@@ -2,6 +2,54 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { submitRsvp } from '../../actions/guestsActions'
 
+const KCOPY = {
+    header: 'RSVP',
+    desc: '지정테이블이니 4월 1일까지 참석여부를 꼭 알려주세요.',
+    error: '양식에 맞게 작성하신 후 다시 보내기를 눌러주세요.',
+    submitted: '이미 RSVP를 보내신 적이 있으시네요. 수정을 원하시면 신랑이나 신부 측에 직접 연락을 주세요.',
+    attend: '감사합니다, 결혼식 때 뵙겠습니다.',
+    notAttend: '너무 아쉽네요, 그래도 결혼 후 꼭 만나서 축하해주세요!',
+    form: {
+        q1: '참석하시겠습니까?',
+        q1a1: '네',
+        q1a2: '아니요',
+        q2: '어느 쪽 하객이신가요?',
+        q2a1: '신랑',
+        q2a2: '신부',
+        q3: '성함을 적어주세요 (영문으로 부탁드립니다.)',
+        q4: '이메일을 적어주세요',
+        q5: '성인이 총 몇 명이신가요? (본인 포함)',
+        q6: '어린이가 있으신가요?'
+    },
+    button: '보내기'
+}
+
+const ECOPY = {
+    header: 'RSVP',
+    desc: 'Tables are resered, the facor of a reply is requested by April 1st.',
+    error: 'Please correct the fields and submit again.',
+    submitted: 'You already Submitted this RSVP. If you want to modify your RSVP, please contact to Alex or Hanna!',
+    attend: 'Thank you for you said will attend our wedding, see you at our wedding!',
+    notAttend: 'Sorry to hear that, but please meet us in near future!',
+    form: {
+        q1: 'Will you attend?',
+        q1a1: 'Will attend',
+        q1a2: 'Unable to attend',
+        q2: 'Which side are you?',
+        q2a1: 'Groom',
+        q2a2: 'Bride',
+        q3: 'What your name?',
+        q4: 'What is your email?',
+        q5: 'Total adults (includes you)',
+        q6: 'Total kids'
+    },
+    button: 'SEND'
+}
+
+const getCopy = isKor => {
+    return isKor ? KCOPY : ECOPY
+}
+
 class Rsvp extends Component {
     constructor(props) {
         super(props)
@@ -92,53 +140,61 @@ class Rsvp extends Component {
     }
 
     render() {
+        const { isKor } = this.props
         const { sumbitted, attend, hasErrors, userExists, alreadySumbitted, emailError } = this.state
+
+        const COPY = getCopy(isKor)
 
         return (
             <section>
                 <div className="center">
                     <div className="hr" />
-                    <h2 className="header" id="rsvp">RSVP</h2>
-                    <p className="pb-1">Invitation card required to attending our wedding.</p>
+                    <h2 className="header tac" id="rsvp">{COPY.header}</h2>
+                    <p className="pb-1 tac">
+                        {COPY.desc}
+                    </p>
                     {hasErrors &&
-                        <p className="error-box mb-1">Please correct the fields and submit again.</p>
+                        <p className="error-box mb-1">
+                            {COPY.error}
+                        </p>
                     }
                     { alreadySumbitted ?
                         <p className="message-box mb-1">
-                            You already Submitted this RSVP. If you want to modify your RSVP, please contact to Alex or Hanna!
+                            {COPY.submitted}
                         </p>
                         :
                         sumbitted
-                            ? <p className={"message-box"}>
+                            ? <p className="message-box">
                                 {userExists 
-                                    ? "You already Submitted this RSVP. If you want to modify your RSVP, please contact to Alex or Hanna!" 
+                                    ? COPY.sumbitted
                                     : attend === "1"
-                                        ? "Thank you for you said attend our wedding, see you at our wedding!"
-                                        : "Sorry to hear that, but please meet us in near future!"}
+                                        ? COPY.attend
+                                        : COPY.notAttend
+                                }
                             </p>
                             : <form>
                                 <div>
-                                    <label className="tag">Will you attend?</label>
-                                    <label><input type="radio" name="attend" value="1" onChange={this.onChange} />Will attend</label>
-                                    <label><input type="radio" name="attend" value="0" onChange={this.onChange} />Unable to attend</label>
+                                    <label className="tag">{COPY.form.q1}</label>
+                                    <label><input type="radio" name="attend" value="1" onChange={this.onChange} />{COPY.form.q1a1}</label>
+                                    <label><input type="radio" name="attend" value="0" onChange={this.onChange} />{COPY.form.q1a2}</label>
                                 </div>
                                 <div>
-                                    <label className="tag">Which side are you?</label>
-                                    <label><input type="radio" name="side" value="groom" onChange={this.onChange} />Groom</label>
-                                    <label><input type="radio" name="side" value="bride" onChange={this.onChange} />Bride</label>
+                                    <label className="tag">{COPY.form.q2}</label>
+                                    <label><input type="radio" name="side" value="groom" onChange={this.onChange} />{COPY.form.q2a1}</label>
+                                    <label><input type="radio" name="side" value="bride" onChange={this.onChange} />{COPY.form.q2a2}</label>
                                 </div>
                                 <div>
-                                    <label className="tag">What your name?</label>
+                                    <label className="tag">{COPY.form.q3}</label>
                                     <input type="text" name="name" onChange={this.onChange} placeholder="Alex Bae" />
                                 </div>
                                 <div>
-                                    <label className="tag">What is your email?</label>
+                                    <label className="tag">{COPY.form.q4}</label>
                                     <input className={emailError ? "input-error" : ""} type="text" name="email" onChange={this.onChange} onBlur={this.checkEmail} placeholder="alexbae84@gmail.com" />
                                 </div>
                                 {attend === "1" && (
                                     <>
                                         <div>
-                                            <label className="tag">Total adults (includes you)</label>
+                                            <label className="tag">{COPY.form.q5}</label>
                                             <select name="adults" onChange={this.onChange}>
                                                 <option>1</option>
                                                 <option>2</option>
@@ -148,7 +204,7 @@ class Rsvp extends Component {
                                             </select>
                                         </div>
                                         <div>
-                                            <label className="tag">Total kids</label>
+                                            <label className="tag">{COPY.form.q6}</label>
                                             <select name="kids" onChange={this.onChange}>
                                                 <option>0</option>
                                                 <option>1</option>
@@ -158,7 +214,7 @@ class Rsvp extends Component {
                                         </div>
                                     </>
                                 )}
-                                <input type="submit" value="SUMBIT" disabled={hasErrors ? true : false} onClick={this.onSubmit} />
+                                <input type="submit" value={COPY.button} disabled={hasErrors ? true : false} onClick={this.onSubmit} />
                             </form>
                     }
                 </div>

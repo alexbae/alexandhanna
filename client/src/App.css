@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 0.5rem 0;
+}
+
 a:hover {
     text-decoration: underline;
 }
@@ -35,21 +39,29 @@ input[type="text"].input-error {
 }
 
 .header {
-    /* margin-top: 5rem; */
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     font-size: 1.25rem;
     color: grey;
 }
 
+#rsvp {
+    margin-bottom: 1px;
+}
+
 .title {
     color: darkgray;
     font-weight: bold;
-    margin: 1rem 0 .5rem;
+    margin: 1.5rem 0 .5rem;
 }
 
 .logo {
     width: 200px;
+}
+
+.small-header {
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .marker {
@@ -60,7 +72,7 @@ input[type="text"].input-error {
 }
 
 .hr {
-    border-top: 1px solid #dadada;
+    border-top: 1px solid #f3f3f3;
     width: 250px;
     margin: 3rem auto;
 }
@@ -97,6 +109,10 @@ input[type="text"].input-error {
     margin: 0 auto;
     padding: 0 .75rem;
     max-width: 600px;
+}
+
+.tac {
+    text-align: center;
 }
 
 .counter strong {
@@ -245,4 +261,25 @@ footer {
 
 .admin-list li {
     margin: 1rem;
+}
+
+.language {
+    margin-top: 2rem;
+    text-align: right;
+    font-size: 12px;
+}
+
+.language span {
+    padding: 0 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    color: gray;
+}
+
+.language span.selected {
+    color: #262626;
+}
+
+.language span:first-child {
+    border-right: 1px solid gray;
 }

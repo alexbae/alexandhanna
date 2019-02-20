@@ -8,7 +8,10 @@ class Registry extends Component {
                     <div className="hr" />
                     <h2 className="header">Registry</h2>
                     <p>
-                        Please be aware that gifts are not necessary. Your presence is all that is required. However, for your convenience Hanna Kim and Alex Bae have prepared a gift registry.
+                        Please be aware that gifts are not necessary. Your presence is all that is required.
+                    </p>
+                    <p>
+                        저희는 선물보다 하객들의 참석이 더 중요합니다.
                     </p>
                     <ul className="Registry-list">
                         <li>
