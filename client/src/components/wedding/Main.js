@@ -3,7 +3,7 @@ import GoogleMapReact from 'google-map-react';
 
 import logo from '../../assets/images/logo.svg'
 import marker from '../../assets/images/marker.svg'
-import main from '../../assets/images/catalina.jpg'
+import main from '../../assets/images/main.jpg'
 
 const now = new Date()
 const end = new Date('05/04/2019 00:00 AM')
@@ -60,7 +60,7 @@ class Main extends Component {
                     </div>
                 </header>                
                 <div className="photo-placeholder">
-                    <img src={main} alt="main" />
+                    <img src={main} alt="main" className="main-photo" />
                 </div>
                 <div className="center">
                     <div className="language">

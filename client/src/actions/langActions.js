@@ -1,5 +1,3 @@
-import axios from 'axios'
-
 import { GET_ENGLISH, GET_KOREAN } from './types'
 
 export const setEnglish = () => {
