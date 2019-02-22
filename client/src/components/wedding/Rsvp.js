@@ -26,7 +26,7 @@ const KCOPY = {
 
 const ECOPY = {
     header: 'RSVP',
-    desc: 'Tables are resered, the favor of a reply is requested by April 1st.',
+    desc: 'Tables are reserved, the favor of a reply is requested by April 1st.',
     error: 'Please correct the fields and send it again.',
     submitted: 'You already Submitted this RSVP. If you want to modify your RSVP, please contact to Alex or Hanna!',
     attend: 'Thank you for you said will attend our wedding, see you at our wedding!',
