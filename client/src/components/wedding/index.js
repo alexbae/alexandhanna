@@ -19,8 +19,8 @@ class Wedding extends Component {
                 <Main setEnglish={setEnglish} setKorean={setKorean} isKor={isKor} />
                 <Rsvp isKor={isKor} />
                 <Photos />
-                <Registry />
-                <Others />
+                <Registry isKor={isKor} />
+                <Others isKor={isKor} />
                 <Footer />
             </>
         )

@@ -82,8 +82,8 @@ class Main extends Component {
                     <div className="hr" />
                     <h2 className="header tac">
                         {isKor 
-                            ? '날짜'
-                            : 'Date'
+                            ? '결혼식 날짜/시간'
+                            : 'Event Date'
                         }<br />
                         {isKor
                             ? <span className="small-header"><span>{dday}</span> 일 남음</span>
@@ -91,12 +91,12 @@ class Main extends Component {
                         }
                     </h2>
                     <div className="tac">
-                        <strong>{isKor ? '2019년 5월 4일' : 'May 4, 2019'}</strong>&nbsp;&nbsp;
-                        {isKor ? ' 오후 4시' : ' 4:00 PM'}
+                        <strong>{isKor ? '2019년 5월 4일 토요일' : 'Saturday, May 4th, 2019'}</strong><br />
+                        {isKor ? '오후 4시' : 'at 4:00 in the afternoon'}
                     </div>
                     <div className="hr" />
                     <h2 className="header tac">
-                        {isKor ? '장소' : 'Location'}
+                        {isKor ? '결혼식 장소' : 'Event Location'}
                     </h2>
                     <p className="tac">
                         <strong>Catalina View Gardens</strong> (<a href="http://www.catalinaviewgardens.com/photo-gallery/" target="_blank" rel="noopener noreferrer">

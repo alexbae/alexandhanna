@@ -123,6 +123,10 @@ input[type="text"].input-error {
     font-size: 1.25rem;
 }
 
+.mb2 {
+    margin-bottom: 3rem;
+}
+
 .map {
     margin-top: 2rem;
 }

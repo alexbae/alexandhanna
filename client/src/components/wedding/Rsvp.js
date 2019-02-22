@@ -21,13 +21,13 @@ const KCOPY = {
         q5: '성인이 총 몇 명이신가요? (본인 포함)',
         q6: '어린이가 있으신가요?'
     },
-    button: '보내기'
+    button: '신부랑 신랑에게 보내기'
 }
 
 const ECOPY = {
     header: 'RSVP',
-    desc: 'Tables are resered, the facor of a reply is requested by April 1st.',
-    error: 'Please correct the fields and submit again.',
+    desc: 'Tables are resered, the favor of a reply is requested by April 1st.',
+    error: 'Please correct the fields and send it again.',
     submitted: 'You already Submitted this RSVP. If you want to modify your RSVP, please contact to Alex or Hanna!',
     attend: 'Thank you for you said will attend our wedding, see you at our wedding!',
     notAttend: 'Sorry to hear that, but please meet us in near future!',
@@ -43,11 +43,7 @@ const ECOPY = {
         q5: 'Total adults (includes you)',
         q6: 'Total kids'
     },
-    button: 'SEND'
-}
-
-const getCopy = isKor => {
-    return isKor ? KCOPY : ECOPY
+    button: 'Send to Hanne and Alex'
 }
 
 class Rsvp extends Component {
@@ -140,10 +136,9 @@ class Rsvp extends Component {
     }
 
     render() {
-        const { isKor } = this.props
         const { sumbitted, attend, hasErrors, userExists, alreadySumbitted, emailError } = this.state
 
-        const COPY = getCopy(isKor)
+        const COPY = this.props.isKor ? KCOPY : ECOPY
 
         return (
             <section>

@@ -20,7 +20,7 @@ class Photos extends Component {
             <section>
                 <div className="center">
                     <div className="hr" />
-                    <h2 className="header">Photos</h2>
+                    <h2 className="header tac">Photos</h2>
                     <Carousel dynamicHeight={true}>
                         <div>
                             <img src={pic01} alt="wedding01" />

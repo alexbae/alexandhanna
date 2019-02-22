@@ -1,18 +1,25 @@
 import React, { Component } from 'react'
 
+const KCOPY = {
+    title: "선물",
+    desc: "저희는 선물보다 하객들의 참석이 더 중요합니다."
+}
+
+const ECOPY = {
+    title: "Registry",
+    desc: "Please be aware that gifts are not necessary. Your presence is all that is required."
+}
+
 class Registry extends Component {
     render() {
+        const COPY = this.props.isKor ? KCOPY : ECOPY
+
         return (
             <section>
                 <div className="center">
                     <div className="hr" />
-                    <h2 className="header">Registry</h2>
-                    <p>
-                        Please be aware that gifts are not necessary. Your presence is all that is required.
-                    </p>
-                    <p>
-                        저희는 선물보다 하객들의 참석이 더 중요합니다.
-                    </p>
+                    <h2 className="header">{COPY.title}</h2>
+                    <p>{COPY.desc}</p>
                     <ul className="Registry-list">
                         <li>
                             <a href="https://www.amazon.com/wedding/junman-bae-hanna-kim-rancho-palos-verdes-may-2019/registry/3SEBCGSRDV3XL" target="_blank" rel="noopener noreferrer">
