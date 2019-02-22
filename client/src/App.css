@@ -1,3 +1,7 @@
+body {
+    color: #1d2129;
+}
+
 strong {
     font-weight: bold;
 }
@@ -9,6 +13,11 @@ a {
 
 p {
     margin: 0.5rem 0;
+}
+
+.bigger {
+    font-size: 1.25rem;
+    line-height: 2rem;
 }
 
 a:hover {

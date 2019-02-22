@@ -78,7 +78,7 @@ class Main extends Component {
                     <h2 className="header tac">
                         {COPY.from.title}
                     </h2>
-                    <p className="tac">
+                    <p className="tac bigger">
                         {COPY.from.desc}
                     </p>
                     <div className="hr" />
