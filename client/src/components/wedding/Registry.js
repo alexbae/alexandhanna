@@ -16,7 +16,7 @@ class Registry extends Component {
 
         return (
             <section>
-                <div className="center">
+                <div className="center tac">
                     <div className="hr" />
                     <h2 className="header">{COPY.title}</h2>
                     <p>{COPY.desc}</p>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { setEnglish, setKorean } from '../../actions/langActions'
 
 import Main from './Main'
+import Map from './Map'
 import Rsvp from './Rsvp'
 import Others from './Others'
 import Photos from './Photos'
@@ -17,6 +18,7 @@ class Wedding extends Component {
         return (
             <>
                 <Main setEnglish={setEnglish} setKorean={setKorean} isKor={isKor} />
+                <Map isKor={isKor} />
                 <Rsvp isKor={isKor} />
                 <Photos />
                 <Registry isKor={isKor} />
