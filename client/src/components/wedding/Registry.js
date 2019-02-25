@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 
 const KCOPY = {
     title: "선물",
-    desc: "저희는 선물보다 하객들의 참석이 더 중요합니다."
+    desc: "결혼선물은 중요하게 생각하지 않습니다, 저희 결혼식에 오셔서 축하해주세요."
 }
 
 const ECOPY = {
-    title: "Registry",
-    desc: "Please be aware that gifts are not necessary. Your presence is all that is required."
+    title: "Gift Registry",
+    desc: "Wedding gifts are not necessary, your presence is all that matters."
 }
 
 class Registry extends Component {

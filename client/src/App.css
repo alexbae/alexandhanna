@@ -15,6 +15,13 @@ p {
     margin: 0.5rem 0;
 }
 
+select {
+    height: 2rem;
+    min-width: 5rem;
+    background: white;
+    border: 1px solid #dadada;
+}
+
 .bigger {
     font-size: 1.25rem;
     line-height: 2rem;

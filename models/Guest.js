@@ -26,6 +26,10 @@ const GuestSchema = new Schema({
     kids: {
         type: Number,
         required: true
+    },
+    otherName: {
+        type: String,
+        required: false
     }
 });
 

@@ -8,7 +8,7 @@ const KCOPY = {
     error: '양식에 맞게 작성하신 후 다시 보내기를 눌러주세요.',
     submitted: '이미 RSVP를 보내신 적이 있으시네요. 수정을 원하시면 신랑이나 신부 측에 직접 연락을 주세요.',
     attend: '감사합니다, 결혼식 때 뵙겠습니다.',
-    notAttend: '너무 아쉽네요, 그래도 결혼 후 꼭 만나서 축하해주세요!',
+    notAttend: '유감이네요, 결혼식에서 못 뵈어도 조만간 따로 인사드리겠습니다.',
     form: {
         q1: '참석하시겠습니까?',
         q1a1: '네',
@@ -16,21 +16,22 @@ const KCOPY = {
         q2: '어느 쪽 하객이신가요?',
         q2a1: '신랑',
         q2a2: '신부',
-        q3: '성함을 적어주세요 (영문으로 부탁드립니다.)',
-        q4: '이메일을 적어주세요',
+        q3: '성함을 적어주세요. (영문)',
+        q4: '이메일을 적어주세요.',
         q5: '성인이 총 몇 명이신가요? (본인 포함)',
-        q6: '어린이가 있으신가요?'
+        q6: '어린이가 있으신가요?',
+        q7: '같이 오시는 분(들)이 있으면 성함을 적어주세요. (여러명일 경우 쉼표를 사용하여 나눠주세요.)'
     },
     button: '신부랑 신랑에게 보내기'
 }
 
 const ECOPY = {
     header: 'RSVP',
-    desc: 'Tables are reserved, the favor of a reply is requested by April 1st.',
+    desc: 'Tables are reserved, please RSVP by April 1st.',
     error: 'Please correct the fields and send it again.',
-    submitted: 'You already Submitted this RSVP. If you want to modify your RSVP, please contact to Alex or Hanna!',
-    attend: 'Thank you for you said will attend our wedding, see you at our wedding!',
-    notAttend: 'Sorry to hear that, but please meet us in near future!',
+    submitted: 'You have already Submitted your RSVP. If you would like to modify your RSVP, please contact Alex or Hanna!',
+    attend: 'Thank you for attending our wedding. Look forward to see you on May 4th!',
+    notAttend: 'Sorry to hear that, but we look forward to meet you very soon!',
     form: {
         q1: 'Will you attend?',
         q1a1: 'Will attend',
@@ -38,10 +39,11 @@ const ECOPY = {
         q2: 'Which side are you?',
         q2a1: 'Groom',
         q2a2: 'Bride',
-        q3: 'What your name?',
-        q4: 'What is your email?',
-        q5: 'Total adults (includes you)',
-        q6: 'Total kids'
+        q3: `What's your name?`,
+        q4: `What's your email address?`,
+        q5: 'Total adults (including you)',
+        q6: 'Total kids',
+        q7: `Please list each person's name that's coming with you if there's any. (seperated by comma)`
     },
     button: 'Send to Hanne and Alex'
 }
@@ -115,7 +117,8 @@ class Rsvp extends Component {
             name: this.state.name,
             email: this.state.email,
             adults: this.state.adults,
-            kids: this.state.kids
+            kids: this.state.kids,
+            otherName: this.state.otherName
         }
 
         if (this.isValid(guestData)) {
@@ -206,6 +209,10 @@ class Rsvp extends Component {
                                                 <option>2</option>
                                                 <option>3</option>
                                             </select>
+                                        </div>
+                                        <div>
+                                            <label className="tag">{COPY.form.q7}</label>
+                                            <input type="text" name="otherName" onChange={this.onChange} placeholder="Hanna Kim, Kid Name" />
                                         </div>
                                     </>
                                 )}

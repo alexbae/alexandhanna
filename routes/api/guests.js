@@ -38,7 +38,8 @@ router.post('/', (req, res) => {
                     name: req.body.name,
                     email: req.body.email,
                     adults: req.body.adults,
-                    kids: req.body.kids
+                    kids: req.body.kids,
+                    otherName: req.body.otherName
                 });
 
                 newGuest.save()

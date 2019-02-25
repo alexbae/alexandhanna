@@ -74,6 +74,7 @@ class Rsvp extends Component {
                                         <td>Status</td>
                                         <td>Adults</td>
                                         <td>Kids</td>
+                                        <td>Other Name</td>
                                     </tr>
                                     { guests && guests.length && (
                                         guests.map((guest, idx) =>
@@ -83,6 +84,7 @@ class Rsvp extends Component {
                                                     <td>{guest.attend ? "attending" : "not attending"}</td>
                                                     <td>{guest.adults}</td>
                                                     <td>{guest.kids}</td>
+                                                    <td>{guest.otherName}</td>
                                                 </tr>
                                             )
                                         )
@@ -99,6 +101,7 @@ class Rsvp extends Component {
                                         <td>Status</td>
                                         <td>Adults</td>
                                         <td>Kids</td>
+                                        <td>Other Name</td>
                                     </tr>
                                     { guests && guests.length && (
                                         guests.map((guest, idx) =>
@@ -108,6 +111,7 @@ class Rsvp extends Component {
                                                     <td>{guest.attend ? "attending" : "not attending"}</td>
                                                     <td>{guest.adults}</td>
                                                     <td>{guest.kids}</td>
+                                                    <td>{guest.otherName}</td>
                                                 </tr>
                                             )
                                         )

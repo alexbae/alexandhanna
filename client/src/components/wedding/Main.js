@@ -14,7 +14,7 @@ const dday = gap > 0 ? (gap > day ? cal : 1 ) : 0
 const KCOPY = {
     from: {
         title: '신랑 배준만 과 신부 김해나리',
-        desc: '뉴욕과 샌프란시스코를 오가며 키워온 저희 사랑의 결실을 이제 맺으려 합니다. 저희 결혼식은 여러 이유로  조촐하게 치르기로 했습니다. 저희 결혼을 축하해 주실 모든 분을 초대하지 못해 진심으로 죄송합니다. 마음으로나마 축하해주시면 감사하겠습니다.'
+        desc: '뉴욕과 샌프란시스코를 오가며 키워온 저희가 사랑의 결실을 이제 맺으려 합니다. 저희 결혼식은 여러 이유로  조촐하게 치르기로 했습니다. 저희 결혼을 축하해 주실 모든 분을 초대하지 못해 진심으로 죄송합니다. 마음으로나마 축하해주시면 감사하겠습니다.'
     },
     date: {
         title: '결혼식 날짜/시간',
@@ -26,7 +26,7 @@ const KCOPY = {
 const ECOPY = {
     from: {
         title: 'From Alex Bae & Hanna Kim',
-        desc: 'Because you have shared in our lives and supported our love, we invite you to the celebration of our marriage.'
+        desc: `Because you have shared in our lives and supported our love, we invite you to the celebration of our marriage. We can't wait to share our special day with you!`
     },
     date: {
         title: 'Event Date',

@@ -6,7 +6,8 @@ const initialState = {
         email: null,
         attend: false,
         adult: 0,
-        kids: 0
+        kids: 0,
+        otherName: null
     }
 }
 
