@@ -28,15 +28,15 @@ const ECOPY = {
     },
     drinks: {
         header: 'Beverage',
-        desc: `Only wine and champagn and non-alcoholic beverage will be served during our reception.`
+        desc: `Only wine and champagne and non-alcoholic beverage will be served during our reception.`
     },
     parking: {
         header: 'Parking',
-        desc: `The venue has a huge self-parking area on site. Please make sure to be dropped off near the parking lot not at the front gate if you're riding Uber, otherwiser there will be too much walking(or hiking) to enter the wedding area.`
+        desc: `The venue has a huge self-parking area on site. Please make sure to be dropped off near the parking lot not at the front gate if you're riding Uber, otherwise there will be too much walking(or hiking) to enter the wedding area.`
     },
     etc: {
         header: 'Etc.',
-        desc: `The venue is completely outside and there is no covered area. Oceanside weather in May can be unpredictable during night time, so bring a layer piece is recommended.`
+        desc: `The venue is completely outside and there is no covered area. Oceanside weather in May can be unpredictable during nighttime, so bring a layer piece is recommended.`
     }
 }
 
