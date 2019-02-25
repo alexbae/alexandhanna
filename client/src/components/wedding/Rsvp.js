@@ -72,7 +72,7 @@ class Rsvp extends Component {
 
     componentDidMount() {
         this.setState({
-            alreadySumbitted: localStorage.getItem("@wedding/submitted")
+            alreadySumbitted: localStorage.getItem("@alexandhanna/submitted")
         })
     }
 
@@ -124,7 +124,7 @@ class Rsvp extends Component {
         if (this.isValid(guestData)) {
             this.props.submitRsvp(guestData)
             this.setState({ hasErrors: false, sumbitted: true })
-            localStorage.setItem("@wedding/submitted", true)
+            localStorage.setItem("@alexandhanna/submitted", true)
         } else {
             this.setState({ hasErrors: true })
         }
@@ -142,7 +142,7 @@ class Rsvp extends Component {
         const { sumbitted, attend, hasErrors, userExists, alreadySumbitted, emailError } = this.state
 
         const COPY = this.props.isKor ? KCOPY : ECOPY
-
+console.log('sdfsdfsfdsf', this.props, userExists, alreadySumbitted)
         return (
             <section>
                 <div className="center">
@@ -151,73 +151,78 @@ class Rsvp extends Component {
                     <p className="pb-1 tac">
                         {COPY.desc}
                     </p>
-                    {hasErrors &&
+                    { hasErrors &&
                         <p className="error-box mb-1">
                             {COPY.error}
                         </p>
                     }
-                    { alreadySumbitted ?
-                        <p className="message-box mb-1">
+                    { userExists &&
+                        <p className="error-box mb-1">
                             {COPY.submitted}
                         </p>
-                        :
-                        sumbitted
-                            ? <p className="message-box">
-                                {userExists 
-                                    ? COPY.sumbitted
-                                    : attend === "1"
+                    }
+                    { alreadySumbitted &&
+                      <p className="message-box mb-1">
+                          {COPY.submitted}
+                      </p>  
+                    }
+                    { alreadySumbitted || userExists
+                        ? null
+                        : sumbitted
+                                ? <p className="message-box">
+                                    { attend === "1"
                                         ? COPY.attend
                                         : COPY.notAttend
-                                }
-                            </p>
-                            : <form>
-                                <div>
-                                    <label className="tag">{COPY.form.q1}</label>
-                                    <label><input type="radio" name="attend" value="1" onChange={this.onChange} />{COPY.form.q1a1}</label>
-                                    <label><input type="radio" name="attend" value="0" onChange={this.onChange} />{COPY.form.q1a2}</label>
-                                </div>
-                                <div>
-                                    <label className="tag">{COPY.form.q2}</label>
-                                    <label><input type="radio" name="side" value="groom" onChange={this.onChange} />{COPY.form.q2a1}</label>
-                                    <label><input type="radio" name="side" value="bride" onChange={this.onChange} />{COPY.form.q2a2}</label>
-                                </div>
-                                <div>
-                                    <label className="tag">{COPY.form.q3}</label>
-                                    <input type="text" name="name" onChange={this.onChange} placeholder="Alex Bae" />
-                                </div>
-                                <div>
-                                    <label className="tag">{COPY.form.q4}</label>
-                                    <input className={emailError ? "input-error" : ""} type="text" name="email" onChange={this.onChange} onBlur={this.checkEmail} placeholder="alexbae84@gmail.com" />
-                                </div>
-                                {attend === "1" && (
-                                    <>
-                                        <div>
-                                            <label className="tag">{COPY.form.q5}</label>
-                                            <select name="adults" onChange={this.onChange}>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label className="tag">{COPY.form.q6}</label>
-                                            <select name="kids" onChange={this.onChange}>
-                                                <option>0</option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                            </select>
-                                        </div>
-                                        <div>
-                                            <label className="tag">{COPY.form.q7}</label>
-                                            <input type="text" name="others" onChange={this.onChange} placeholder="Hanna Kim, Kid Name" autocomplete="off" />
-                                        </div>
-                                    </>
-                                )}
-                                <input type="submit" value={COPY.button} disabled={hasErrors ? true : false} onClick={this.onSubmit} />
-                            </form>
+                                    }
+                                </p>
+                                : <form>
+                                    <div>
+                                        <label className="tag">{COPY.form.q1}</label>
+                                        <label><input type="radio" name="attend" value="1" onChange={this.onChange} />{COPY.form.q1a1}</label>
+                                        <label><input type="radio" name="attend" value="0" onChange={this.onChange} />{COPY.form.q1a2}</label>
+                                    </div>
+                                    <div>
+                                        <label className="tag">{COPY.form.q2}</label>
+                                        <label><input type="radio" name="side" value="groom" onChange={this.onChange} />{COPY.form.q2a1}</label>
+                                        <label><input type="radio" name="side" value="bride" onChange={this.onChange} />{COPY.form.q2a2}</label>
+                                    </div>
+                                    <div>
+                                        <label className="tag">{COPY.form.q3}</label>
+                                        <input type="text" name="name" onChange={this.onChange} placeholder="Alex Bae" />
+                                    </div>
+                                    <div>
+                                        <label className="tag">{COPY.form.q4}</label>
+                                        <input className={emailError ? "input-error" : ""} type="text" name="email" onChange={this.onChange} onBlur={this.checkEmail} placeholder="alexbae84@gmail.com" />
+                                    </div>
+                                    {attend === "1" && (
+                                        <>
+                                            <div>
+                                                <label className="tag">{COPY.form.q5}</label>
+                                                <select name="adults" onChange={this.onChange}>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label className="tag">{COPY.form.q6}</label>
+                                                <select name="kids" onChange={this.onChange}>
+                                                    <option>0</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                </select>
+                                            </div>
+                                            <div>
+                                                <label className="tag">{COPY.form.q7}</label>
+                                                <input type="text" name="others" onChange={this.onChange} placeholder="Hanna Kim, Kid Name" autoComplete="off" />
+                                            </div>
+                                        </>
+                                    )}
+                                    <input type="submit" value={COPY.button} disabled={hasErrors ? true : false} onClick={this.onSubmit} />
+                                </form>
                     }
                 </div>
             </section>

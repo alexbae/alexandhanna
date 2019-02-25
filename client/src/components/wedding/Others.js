@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 const KCOPY = {
     title: '그 밖에 정보',
     food: {
-        header: '음식',
+        header: '저녁식사',
         desc: `저희 결혼식에서는 모든 하객분들께 저녁으로 안심스테이크와 몇 가지 간단한 음식들을 제공할 예정입니다. 스테이크를 못 드시거나 원치 않으시는 분들은 Alex와 Hanna에게 따로 연락주시면 감사하겠습니다.`
     },
     drinks: {
@@ -23,7 +23,7 @@ const KCOPY = {
 const ECOPY = {
     title: 'Other information',
     food: {
-        header: 'Foods',
+        header: 'Dinner',
         desc: `We're serving beef steak for our guests. If you're a vegetarian, please let Alex and Hanna know once you complete RSVP.`
     },
     drinks: {
