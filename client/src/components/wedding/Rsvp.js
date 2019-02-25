@@ -212,7 +212,7 @@ class Rsvp extends Component {
                                         </div>
                                         <div>
                                             <label className="tag">{COPY.form.q7}</label>
-                                            <input type="text" name="others" onChange={this.onChange} placeholder="Hanna Kim, Kid Name" />
+                                            <input type="text" name="others" onChange={this.onChange} placeholder="Hanna Kim, Kid Name" autocomplete="off" />
                                         </div>
                                     </>
                                 )}
