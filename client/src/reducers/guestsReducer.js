@@ -7,7 +7,7 @@ const initialState = {
         attend: false,
         adult: 0,
         kids: 0,
-        otherName: null
+        others: null
     }
 }
 

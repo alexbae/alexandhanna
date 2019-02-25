@@ -43,7 +43,7 @@ const ECOPY = {
         q4: `What's your email address?`,
         q5: 'Total adults (including you)',
         q6: 'Total kids',
-        q7: `Please list each person's name that's coming with you if there's any. (seperated by comma)`
+        q7: `Please list each person's name that's coming with you. (seperated by comma)`
     },
     button: 'Send to Hanne and Alex'
 }
@@ -118,7 +118,7 @@ class Rsvp extends Component {
             email: this.state.email,
             adults: this.state.adults,
             kids: this.state.kids,
-            otherName: this.state.otherName
+            others: this.state.others
         }
 
         if (this.isValid(guestData)) {
@@ -212,7 +212,7 @@ class Rsvp extends Component {
                                         </div>
                                         <div>
                                             <label className="tag">{COPY.form.q7}</label>
-                                            <input type="text" name="otherName" onChange={this.onChange} placeholder="Hanna Kim, Kid Name" />
+                                            <input type="text" name="others" onChange={this.onChange} placeholder="Hanna Kim, Kid Name" />
                                         </div>
                                     </>
                                 )}

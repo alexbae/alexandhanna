@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
                     email: req.body.email,
                     adults: req.body.adults,
                     kids: req.body.kids,
-                    otherName: req.body.otherName
+                    others: req.body.others
                 });
 
                 newGuest.save()

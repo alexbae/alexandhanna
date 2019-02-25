@@ -84,7 +84,7 @@ class Rsvp extends Component {
                                                     <td>{guest.attend ? "attending" : "not attending"}</td>
                                                     <td>{guest.adults}</td>
                                                     <td>{guest.kids}</td>
-                                                    <td>{guest.otherName}</td>
+                                                    <td>{guest.others}</td>
                                                 </tr>
                                             )
                                         )
@@ -111,7 +111,7 @@ class Rsvp extends Component {
                                                     <td>{guest.attend ? "attending" : "not attending"}</td>
                                                     <td>{guest.adults}</td>
                                                     <td>{guest.kids}</td>
-                                                    <td>{guest.otherName}</td>
+                                                    <td>{guest.others}</td>
                                                 </tr>
                                             )
                                         )
