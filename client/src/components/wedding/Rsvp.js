@@ -142,7 +142,7 @@ class Rsvp extends Component {
         const { sumbitted, attend, hasErrors, userExists, alreadySumbitted, emailError } = this.state
 
         const COPY = this.props.isKor ? KCOPY : ECOPY
-console.log('sdfsdfsfdsf', this.props, userExists, alreadySumbitted)
+
         return (
             <section>
                 <div className="center">
