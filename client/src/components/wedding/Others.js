@@ -24,11 +24,11 @@ const ECOPY = {
     title: 'Other information',
     food: {
         header: 'Dinner',
-        desc: `We're serving beef steak for our guests. If you're a vegetarian, please let Alex and Hanna know once you complete RSVP.`
+        desc: `We're serving beef steak for our guests. If you're a vegetarian, please let Alex or Hanna know once you complete RSVP.`
     },
     drinks: {
         header: 'Beverage',
-        desc: `Only wine and champagne and non-alcoholic beverage will be served during our reception.`
+        desc: `Only wine, champagne and non-alcoholic beverages will be served during our reception.`
     },
     parking: {
         header: 'Parking',

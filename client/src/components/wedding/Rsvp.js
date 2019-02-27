@@ -29,9 +29,9 @@ const ECOPY = {
     header: 'RSVP',
     desc: 'Tables are reserved, please RSVP by April 1st.',
     error: 'Please correct the fields and send it again.',
-    submitted: 'You have already Submitted your RSVP. If you would like to modify your RSVP, please contact Alex or Hanna!',
-    attend: 'Thank you for attending our wedding. Look forward to see you on May 4th!',
-    notAttend: 'Sorry to hear that, but we look forward to meet you very soon!',
+    submitted: 'You have already submitted your RSVP. If you would like to modify your RSVP, please contact Alex or Hanna!',
+    attend: 'Thank you for attending our wedding. Look forward to seeing you on May 4th!',
+    notAttend: 'Sorry to hear that, but we look forward to meeting you very soon!',
     form: {
         q1: 'Will you attend?',
         q1a1: 'Will attend',
