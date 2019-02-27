@@ -135,12 +135,24 @@ input[type="text"].input-error {
     text-align: center;
 }
 
+.tar {
+    text-align: right;
+}
+
 .counter strong {
     font-size: 1.25rem;
 }
 
 .mb2 {
     margin-bottom: 3rem;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+
+.mt3 {
+    margin-top: 3rem;
 }
 
 .map {
