@@ -13,6 +13,10 @@ import pic08 from '../../assets/images/engage/08.JPG'
 import pic09 from '../../assets/images/engage/09.JPG'
 import pic10 from '../../assets/images/engage/10.JPG'
 import pic11 from '../../assets/images/engage/11.JPG'
+import pic12 from '../../assets/images/engage/12.JPG'
+import pic13 from '../../assets/images/engage/13.JPG'
+import pic14 from '../../assets/images/engage/14.JPG'
+import pic15 from '../../assets/images/engage/15.JPG'
 
 class Photos extends Component {
     render() {
@@ -54,6 +58,18 @@ class Photos extends Component {
                         </div>
                         <div>
                             <img src={pic11} alt="wedding11" />
+                        </div>
+                        <div>
+                            <img src={pic12} alt="wedding12" />
+                        </div>
+                        <div>
+                            <img src={pic13} alt="wedding13" />
+                        </div>
+                        <div>
+                            <img src={pic14} alt="wedding14" />
+                        </div>
+                        <div>
+                            <img src={pic15} alt="wedding15" />
                         </div>
                     </Carousel>
                 </div>
