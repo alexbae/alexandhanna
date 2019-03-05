@@ -71,8 +71,8 @@ class Main extends Component {
                 </div>
                 <div className="center">
                     <div className="language">
-                        <span onClick={this.onClickKorean} className={isKor ? "selected" : ""}>한글</span>
                         <span onClick={this.onClickEnglish} className={!isKor ? "selected" : ""}>English</span>
+                        <span onClick={this.onClickKorean} className={isKor ? "selected" : ""}>한글</span>
                     </div>
                     <p className="tac bigger mt3">
                         {COPY.from.desc}
