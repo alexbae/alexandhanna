@@ -36,7 +36,7 @@ const ECOPY = {
     },
     etc: {
         header: 'Etc.',
-        desc: `The venue is completely outside and there is no covered area. Oceanside weather in May can be unpredictable during nighttime, so bring a layer piece is recommended.`
+        desc: `The venue is completely outside and there is no covered area. Weather can be unpredictable, extra layering pieces are recommended.`
     }
 }
 
