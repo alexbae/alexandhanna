@@ -185,6 +185,10 @@ form label {
     margin-top: 2rem;
 }
 
+.guest-list .center {
+    max-width: 100%;
+}
+
 .guest-side table {
     width: 100%;
     margin-top: 1rem;

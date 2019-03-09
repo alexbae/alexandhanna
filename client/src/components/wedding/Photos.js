@@ -7,7 +7,6 @@ import pic02 from '../../assets/images/engage/02.JPG'
 import pic03 from '../../assets/images/engage/03.JPG'
 import pic04 from '../../assets/images/engage/04.JPG'
 import pic05 from '../../assets/images/engage/05.JPG'
-import pic06 from '../../assets/images/engage/06.JPG'
 import pic07 from '../../assets/images/engage/07.JPG'
 import pic08 from '../../assets/images/engage/08.JPG'
 import pic10 from '../../assets/images/engage/10.JPG'
@@ -39,9 +38,6 @@ class Photos extends Component {
                         </div>
                         <div>
                             <img src={pic05} alt="wedding05" />
-                        </div>
-                        <div>
-                            <img src={pic06} alt="wedding06" />
                         </div>
                         <div>
                             <img src={pic07} alt="wedding07" />
