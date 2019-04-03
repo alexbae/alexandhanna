@@ -17,9 +17,9 @@ class Wedding extends Component {
 
         return (
             <>
-                <Rsvp isKor={isKor} />
                 <Main setEnglish={setEnglish} setKorean={setKorean} isKor={isKor} />
                 <Map isKor={isKor} />
+                <Rsvp isKor={isKor} />
                 <Photos />
                 <Registry isKor={isKor} />
                 <Others isKor={isKor} />
