@@ -157,15 +157,15 @@ class Admin extends Component {
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/jyx6zgwgh2vqaj9/CVG_first_deposit.pdf?dl=0"}
-                                                title={"first deposit"}
+                                                title={"first deposit : $6000"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/0ulouewgmqte1ba/venue-6000.png?dl=0"}
-                                                title={"second deposit $6,000 (received : 1/3/2019 sent)"}
+                                                title={"second deposit : $6000 (received : 1/3/2019 sent)"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/x005t600hqt3gw5/venue-2000.png?dl=0"}
-                                                title={"third deposit"}
+                                                title={"final deposit : $2000"}
                                             />
                                         </ul>
                                         Chef Dora
@@ -229,13 +229,19 @@ class Admin extends Component {
                                                 linkUrl={"https://www.dropbox.com/s/2lmdr47d762ew3w/voxDj_payment.png?dl=0"}
                                                 title={"final payment : $750"}
                                             />
+                                            <List
+                                                title={"spotlight : $150"}
+                                            />
                                         </ul>
                                         Bartender - auto payment Sapphire credit card<br /><br />
                                         Bright Rentals
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/75n6lmnqiwzx388/bright_deposit.pdf?dl=0"}
-                                                title={"1st deposit"}
+                                                title={"1st deposit : 2306.65"}
+                                            />
+                                            <List
+                                                title={"due final deposit : $2306.35"}
                                             />
                                         </ul>
                                     </div>
