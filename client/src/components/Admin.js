@@ -186,7 +186,7 @@ class Admin extends Component {
                                                 title={"2nd deposit : $4332.99"}
                                             />
                                             <List
-                                                title={"due final deposit : $2809.54"}
+                                                title={"✔️ due final deposit : $2809.54"}
                                             />
                                         </ul>
                                         Michael Ryu
@@ -196,7 +196,7 @@ class Admin extends Component {
                                                 title={"1st deposit : $500"}
                                             />
                                             <List
-                                                title={"due final deposit : $2700"}
+                                                title={"✔️ due final deposit : $2700"}
                                             />
                                         </ul>
                                         Vantage Av
@@ -206,7 +206,7 @@ class Admin extends Component {
                                                 title={"1st deposit : $640"}
                                             />
                                             <List
-                                                title={"due final deposit : $640"}
+                                                title={"✔️ due final deposit : $640"}
                                             />
                                         </ul>
                                         Flower
@@ -216,7 +216,7 @@ class Admin extends Component {
                                                 title={"1st deposit : $1162.25"}
                                             />
                                             <List
-                                                title={"due final deposit : $1162.25"}
+                                                title={"✔️ due final deposit : $1162.25"}
                                             />
                                         </ul>
                                         VoxDjs
@@ -230,7 +230,7 @@ class Admin extends Component {
                                                 title={"final payment : $750"}
                                             />
                                             <List
-                                                title={"spotlight : $150"}
+                                                title={"✔️ spotlight : $150"}
                                             />
                                         </ul>
                                         Bartender - auto payment Sapphire credit card<br /><br />
@@ -241,7 +241,7 @@ class Admin extends Component {
                                                 title={"1st deposit : 2306.65"}
                                             />
                                             <List
-                                                title={"due final deposit : $2306.35"}
+                                                title={"✔️ due final deposit : $2306.35"}
                                             />
                                         </ul>
                                     </div>
@@ -256,6 +256,10 @@ class Admin extends Component {
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/en5n0pfpqhjapjz/voxDj_Wedding_Planning_Document.docx?dl=0"}
                                                 title={"VoxDjs wedding planning document"}
+                                            />
+                                            <List
+                                                linkUrl={"https://docs.google.com/document/d/1vvbjnORnHaw_aaJ57n6jvK37KqLIs6K3PsCxfWMtPQ4/edit?ts=5ca2c4e8"}
+                                                title={"VoxDjs shared google doc"}
                                             />
                                         </ul>
                                     </div>
