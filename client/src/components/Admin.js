@@ -110,7 +110,7 @@ class Admin extends Component {
                                     </div>
                                     <div>
                                         <div className="hr" />
-                                        <h2 className="header">Agreements</h2>
+                                        <h2 className="header">Contract</h2>
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/mj5222ols4uw1d1/CVG_agreement.PDF?dl=0"}
@@ -121,12 +121,32 @@ class Admin extends Component {
                                                 title={"Phtographer: Michael Ryu"}
                                             />
                                             <List
+                                                linkUrl={"https://www.dropbox.com/s/5wxg2ucz38ppiby/vatage-av_agreement.pdf?dl=0"}
+                                                title={"Videographer: Vantage Av"}
+                                            />
+                                            <List
                                                 linkUrl={"https://www.dropbox.com/s/s08d8mwngnup0se/VoxDjs_agreement.PDF?dl=0"}
                                                 title={"DJ: Rigel"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/8p7rrwqe0iggxgc/ChefDora_agreement.PDF?dl=0"}
                                                 title={"Catering: Chef Dora"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/ls1p4csej5e5mla/Aaliyahs_Vase-Invoice.pdf?dl=0"}
+                                                title={"Invoice: no contract - Flower"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/4hrgz644q2joaf8/Bartender.PDF?dl=0"}
+                                                title={"Bartender"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/itoputg4jyz9g97/Bright%20Rentals%20-%20New%20Client%20Packet.pdf?dl=0"}
+                                                title={"Bright - New Client Packet"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/utzkhi9id6s2nim/Reservation-111114.pdf?dl=0"}
+                                                title={"Bright - Reservation"}
                                             />
                                         </ul>
                                     </div>
@@ -173,6 +193,14 @@ class Admin extends Component {
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/2lmdr47d762ew3w/voxDj_payment.png?dl=0"}
                                                 title={"final payment"}
+                                            />
+                                        </ul>
+                                        Bartender - auto payment Sapphire credit card<br /><br />
+                                        VoxDjs
+                                        <ul className="admin-list">
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/75n6lmnqiwzx388/bright_deposit.pdf?dl=0"}
+                                                title={"1st deposit"}
                                             />
                                         </ul>
                                     </div>
