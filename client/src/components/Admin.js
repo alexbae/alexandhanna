@@ -159,12 +159,14 @@ class Admin extends Component {
                                                 linkUrl={"https://www.dropbox.com/s/jyx6zgwgh2vqaj9/CVG_first_deposit.pdf?dl=0"}
                                                 title={"first deposit"}
                                             />
-                                            <li>
-                                                second deposit $6,000 (received : 1/3/2019 sent)
-                                            </li>
-                                            <li>
-                                                third deposit $2,000 (received : 3/??/2019 sent)
-                                            </li>
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/0ulouewgmqte1ba/venue-6000.png?dl=0"}
+                                                title={"second deposit $6,000 (received : 1/3/2019 sent)"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/x005t600hqt3gw5/venue-2000.png?dl=0"}
+                                                title={"third deposit"}
+                                            />
                                         </ul>
                                         Chef Dora
                                         <ul className="admin-list">
