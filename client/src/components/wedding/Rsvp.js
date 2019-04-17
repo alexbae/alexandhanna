@@ -4,7 +4,7 @@ import { submitRsvp } from '../../actions/guestsActions'
 
 const KCOPY = {
     header: 'RSVP',
-    desc: '지정테이블이니 4월 15일까지 참석여부를 꼭 알려주세요.',
+    desc: '지정테이블이니 참석여부를 꼭 알려주세요.',
     error: '양식에 맞게 작성하신 후 다시 보내기를 눌러주세요.',
     submitted: '이미 RSVP를 보내신 적이 있으시네요. 수정을 원하시면 신랑이나 신부 측에 직접 연락을 주세요.',
     attend: '감사합니다, 결혼식 때 뵙겠습니다.',
@@ -27,7 +27,7 @@ const KCOPY = {
 
 const ECOPY = {
     header: 'RSVP',
-    desc: 'Tables are reserved, please RSVP by April 15.',
+    desc: 'Tables are reserved, please RSVP.',
     error: 'Please correct the fields and send it again.',
     submitted: 'You have already submitted your RSVP. If you would like to modify your RSVP, please contact Alex or Hanna!',
     attend: 'Thank you for attending our wedding. Look forward to seeing you on May 4th!',
