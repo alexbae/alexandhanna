@@ -140,8 +140,22 @@ class Admin extends Component {
                                                 title={"first deposit"}
                                             />
                                             <li>
-                                                second deposit (received : 1/3/2019 sent)
+                                                second deposit $6,000 (received : 1/3/2019 sent)
                                             </li>
+                                            <li>
+                                                third deposit $2,000 (received : 3/??/2019 sent)
+                                            </li>
+                                        </ul>
+                                        Chef Dora
+                                        <ul className="admin-list">
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/j9qdcv1pf8hb3ry/INVOICE%20ALEX%20BAE%20AND%20HANNA%20KIM.pdf?dl=0"}
+                                                title={"1st deposit"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/hxwgo01kgb40fo3/MENU%20SUMMARY%20HANNA%20KIM%20UPDATED-5.pdf?dl=0"}
+                                                title={"2nd deposit"}
+                                            />
                                         </ul>
                                         Michael Ryu
                                         <ul className="admin-list">
@@ -155,6 +169,10 @@ class Admin extends Component {
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/sny2yyc9d0dahzk/voxDj_deposit.pdf?dl=0"}
                                                 title={"deposit"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/2lmdr47d762ew3w/voxDj_payment.png?dl=0"}
+                                                title={"final payment"}
                                             />
                                         </ul>
                                     </div>
