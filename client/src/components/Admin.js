@@ -137,7 +137,7 @@ class Admin extends Component {
                                                 title={"Invoice: no contract - Flower"}
                                             />
                                             <List
-                                                linkUrl={"https://www.dropbox.com/s/4hrgz644q2joaf8/Bartender.PDF?dl=0"}
+                                                linkUrl={"https://www.dropbox.com/s/ph4q5lv872vsxsj/Bartender.PDF?dl=0"}
                                                 title={"Bartender"}
                                             />
                                             <List
@@ -171,30 +171,63 @@ class Admin extends Component {
                                         Chef Dora
                                         <ul className="admin-list">
                                             <List
-                                                linkUrl={"https://www.dropbox.com/s/j9qdcv1pf8hb3ry/INVOICE%20ALEX%20BAE%20AND%20HANNA%20KIM.pdf?dl=0"}
-                                                title={"1st deposit"}
+                                                title={"tasting : $219"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/hxwgo01kgb40fo3/MENU%20SUMMARY%20HANNA%20KIM%20UPDATED-5.pdf?dl=0"}
-                                                title={"2nd deposit"}
+                                                title={"2nd deposit : $4332.99"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/j9qdcv1pf8hb3ry/INVOICE%20ALEX%20BAE%20AND%20HANNA%20KIM.pdf?dl=0"}
+                                                title={"1st deposit : $1000"}
+                                            />
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/hxwgo01kgb40fo3/MENU%20SUMMARY%20HANNA%20KIM%20UPDATED-5.pdf?dl=0"}
+                                                title={"2nd deposit : $4332.99"}
+                                            />
+                                            <List
+                                                title={"due final deposit : $2809.54"}
                                             />
                                         </ul>
                                         Michael Ryu
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/0z6jnewrtpobe1a/photo_deposit.pdf?dl=0"}
-                                                title={"deposit"}
+                                                title={"1st deposit : $500"}
+                                            />
+                                            <List
+                                                title={"due final deposit : $2700"}
+                                            />
+                                        </ul>
+                                        Vantage Av
+                                        <ul className="admin-list">
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/otke5hewfd6p47x/videographer-invoice-01.jpeg?dl=0"}
+                                                title={"1st deposit : $640"}
+                                            />
+                                            <List
+                                                title={"due final deposit : $640"}
+                                            />
+                                        </ul>
+                                        Flower
+                                        <ul className="admin-list">
+                                            <List
+                                                linkUrl={"https://www.dropbox.com/s/y9vrrgzj0tsx3nm/flower.pdf?dl=0"}
+                                                title={"1st deposit : $1162.25"}
+                                            />
+                                            <List
+                                                title={"due final deposit : $1162.25"}
                                             />
                                         </ul>
                                         VoxDjs
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/sny2yyc9d0dahzk/voxDj_deposit.pdf?dl=0"}
-                                                title={"deposit"}
+                                                title={"1st deposit : $745"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/2lmdr47d762ew3w/voxDj_payment.png?dl=0"}
-                                                title={"final payment"}
+                                                title={"final payment : $750"}
                                             />
                                         </ul>
                                         Bartender - auto payment Sapphire credit card<br /><br />
