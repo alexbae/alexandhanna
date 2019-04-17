@@ -196,7 +196,7 @@ class Admin extends Component {
                                             />
                                         </ul>
                                         Bartender - auto payment Sapphire credit card<br /><br />
-                                        VoxDjs
+                                        Bright Rentals
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/75n6lmnqiwzx388/bright_deposit.pdf?dl=0"}
