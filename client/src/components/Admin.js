@@ -153,29 +153,25 @@ class Admin extends Component {
                                     <div>
                                         <div className="hr" />
                                         <h2 className="header">Receipt</h2>
-                                        Venue
+                                        Venue : $14,000 ($2,000 will refund)
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/jyx6zgwgh2vqaj9/CVG_first_deposit.pdf?dl=0"}
-                                                title={"first deposit : $6000"}
+                                                title={"first deposit : $6,000"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/0ulouewgmqte1ba/venue-6000.png?dl=0"}
-                                                title={"second deposit : $6000 (received : 1/3/2019 sent)"}
+                                                title={"second deposit : $6,000 (received : 1/3/2019 sent)"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/x005t600hqt3gw5/venue-2000.png?dl=0"}
-                                                title={"final deposit : $2000"}
+                                                title={"final deposit : $2,000"}
                                             />
                                         </ul>
-                                        Chef Dora
+                                        Chef Dora : $8,361.53
                                         <ul className="admin-list">
                                             <List
                                                 title={"tasting : $219"}
-                                            />
-                                            <List
-                                                linkUrl={"https://www.dropbox.com/s/hxwgo01kgb40fo3/MENU%20SUMMARY%20HANNA%20KIM%20UPDATED-5.pdf?dl=0"}
-                                                title={"2nd deposit : $4332.99"}
                                             />
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/j9qdcv1pf8hb3ry/INVOICE%20ALEX%20BAE%20AND%20HANNA%20KIM.pdf?dl=0"}
@@ -189,7 +185,7 @@ class Admin extends Component {
                                                 title={"✔️ due final deposit : $2809.54"}
                                             />
                                         </ul>
-                                        Michael Ryu
+                                        Michael Ryu : $3,200
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/0z6jnewrtpobe1a/photo_deposit.pdf?dl=0"}
@@ -199,7 +195,7 @@ class Admin extends Component {
                                                 title={"✔️ due final deposit : $2700"}
                                             />
                                         </ul>
-                                        Vantage Av
+                                        Vantage Av : $1,280
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/otke5hewfd6p47x/videographer-invoice-01.jpeg?dl=0"}
@@ -209,7 +205,7 @@ class Admin extends Component {
                                                 title={"✔️ due final deposit : $640"}
                                             />
                                         </ul>
-                                        Flower
+                                        Flower : $2,324.50
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/y9vrrgzj0tsx3nm/flower.pdf?dl=0"}
@@ -219,7 +215,7 @@ class Admin extends Component {
                                                 title={"✔️ due final deposit : $1162.25"}
                                             />
                                         </ul>
-                                        VoxDjs
+                                        VoxDjs : $1,645
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/sny2yyc9d0dahzk/voxDj_deposit.pdf?dl=0"}
@@ -230,11 +226,12 @@ class Admin extends Component {
                                                 title={"final payment : $750"}
                                             />
                                             <List
-                                                title={"✔️ spotlight : $150"}
+                                                linkUrl={"https://www.dropbox.com/s/mqa7mna0kzqs6mz/IMG_1968.PNG?dl=0"}
+                                                title={"spotlight : $150"}
                                             />
                                         </ul>
-                                        Bartender - auto payment Sapphire credit card<br /><br />
-                                        Bright Rentals
+                                        Bartender : $1,461 - auto payment Sapphire credit card<br /><br />
+                                        Bright Rentals : $4,613
                                         <ul className="admin-list">
                                             <List
                                                 linkUrl={"https://www.dropbox.com/s/75n6lmnqiwzx388/bright_deposit.pdf?dl=0"}
